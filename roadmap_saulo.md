@@ -1,0 +1,47 @@
+# 📋 Roadmap de Tareas - Responsable: Saulo
+
+Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autoservicio".
+
+---
+
+## 🗄️ Etapa 2: API JSON (Backend)
+- [ ] **2.3. Endpoints API JSON (Respuestas en formato JSON)**:
+  - [ ] `POST /api/admin/setup` (registro de usuario admin encriptado).
+  - [ ] `GET /api/productos` (catálogo paginado de productos activos).
+  - [ ] `GET /api/productos/:id` (detalle del producto).
+  - [ ] `POST /api/ventas` (registro de una venta en base de datos).
+  - [ ] `GET /api/ventas` (historial de ventas con productos - Eager Loading).
+- [ ] **2.4. Middlewares de Validación**:
+  - Validar datos obligatorios, formatos de email y precios positivos en peticiones POST/PUT.
+
+## 🔐 Etapa 3: Back-Office Administrativo (Backend - EJS)
+- [ ] **3.2. Dashboard de Administración (`/admin/dashboard`)**:
+  - Vista protegida por middleware de sesión.
+  - Tabla de productos agrupada por categorías mostrando si están Activos o Inactivos.
+- [ ] **3.3. Baja Lógica de Productos**:
+  - Botón para desactivar producto (activo a false en BD) con modal de confirmación.
+- [ ] **3.3. Reactivación de Productos**:
+  - Botón para activar producto inactivo (activo a true en BD) con modal de confirmación.
+- [ ] **3.4. Exportar a Excel**:
+  - Botón para descargar el historial de ventas en formato `.xlsx` usando la librería `xlsx`.
+
+## 📱 Etapa 4: Frontend del Cliente (Autoservicio)
+- [ ] **4.1. Estilos y Temas**:
+  - CSS moderno con variables para Tema Claro y Oscuro.
+  - Switch de cambio de tema con persistencia en `localStorage`.
+- [ ] **4.2.1. Pantalla de Bienvenida**:
+  - Input para ingresar nombre del cliente y validación para avanzar.
+- [ ] **4.2.2. Catálogo de Productos**:
+  - Renderizar productos activos ordenados por categoría, controles de cantidad y descripción.
+
+## 🎓 Requerimientos de Final (Adicionales)
+- [ ] **E.5. Registros y Auditoría**:
+  - Nueva sección de auditoría en el panel de administrador.
+- [ ] **E.6. Sistema de Logs**:
+  - Registrar en base de datos logins de administradores exitosos (fecha, hora, usuario).
+- [ ] **E.7. Monitoreo de Logs**:
+  - Visualizar listado de logs desde el panel de auditoría.
+- [ ] **E.8. Estadísticas**:
+  - Mostrar Top 10 más vendidos, Top 10 ventas más caras y al menos dos métricas de negocio extra.
+- [ ] **E.9. Descarga de Encuestas**:
+  - Botón para exportar todas las encuestas respondidas a formato `.xlsx`.
