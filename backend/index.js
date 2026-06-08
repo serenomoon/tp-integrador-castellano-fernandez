@@ -18,6 +18,11 @@ app.use(cors());
 app.use(express.json());
 
 /*
+creamos un middleware para leer los archivos de la carpeta public(css, imagenes, etc)
+*/
+app.use(express.static("public"));
+
+/*
 - el servidor escucha peticiones (GET) cuando se escribe la URL en el navegador.
 - "/" es la raiz del servidor
 - res.send: mandamos un mensaje al navegador desde el servidor
@@ -51,6 +56,15 @@ app.get("/test-db", async (req, res) => {
         });
     }
 });
+
+/*
+- endpoint para cargar en formato HTML el login de usuario
+- sabe que tiene que ir a buscarlo a /views por el app.set que hicimos al principio de este archivo
+*/
+app.get("/admin/login", (req, res) => {
+    res.render("login");
+});
+
 
 /*
 .listen: metodo de express que abre el puerto especificado en el servidor, y escucha cualquier conexion de red entrante

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Autoservicio</title>
+    <!-- Vinculamos el CSS estático. Express lo busca dentro de public/css/ debido al middleware static -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- R.2. Encabezado Obligatorio (Logo, Nombre, Integrantes y Nav) -->
+    <header class="header">
+        <div class="header-container">
+            <span class="logo">👕 UrbanStyle</span>
+            <span class="app-name">Autoservicio Kiosko</span>
+            <nav class="nav">
+                <a href="/">Ir al Kiosco</a>
+            </nav>
+            <span class="student-names">Axel Castellano & Saulo Fernández</span>
+        </div>
+    </header>
+
+    <main class="login-container">
+        <div class="login-card">
+            <h1>Iniciar Sesión</h1>
+            <p class="subtitle">Panel de Administración</p>
+
+            <!-- El formulario envía los datos vía POST a la misma ruta de login -->
+            <form action="/admin/login" method="POST" class="login-form">
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="admin@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+
+            <div class="divider">o bien</div>
+
+            <!-- Botón de Acceso Rápido -->
+            <button type="button" id="btn-quick-access" class="btn btn-secondary">
+                ⚡ Acceso Rápido (Tester)
+            </button>
+        </div>
+    </main>
+
+    <!-- Script de frontend para interactuar con la interfaz de forma dinámica -->
+    <script>
+        document.getElementById('btn-quick-access').addEventListener('click', () => {
+            document.getElementById('correo').value = 'admin@autoservicio.com';
+            // Le ponemos la contraseña que configuraste en tu base de datos local
+            document.getElementById('contrasena').value = 'castellanosaulo';
+        });
+    </script>
+</body>
+</html>
