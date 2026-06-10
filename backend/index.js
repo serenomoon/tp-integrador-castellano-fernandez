@@ -2,7 +2,12 @@ import express from "express";
 import cors from "cors";
 import environments from "./src/api/config/environments.js";
 import connection from "./src/api/database/db.js";
+import session from "express-session";
+import bcrypt from "bcrypt";
 
+/*
+MIDDLEWARE: Es una función intermedia que se ejecuta en el servidor Express desde que llega la petición del cliente (request) hasta que se envía la respuesta final (response). Sirve para inspeccionar, transformar, validar o bloquear esa petición.
+*/
 
 const app = express(); // guardamos el objeto express
 const PORT = environments.port; //guardamos el puerto desde environments
@@ -16,6 +21,27 @@ app.use(cors());
 
  //parsea a JSON la respuesta obtenida desde el FRONT y te lo convierte a objeto JS, luego lo vamos a utilizar con req.body.KEY
 app.use(express.json());
+
+/*
+middleware para leer formularios: recibe los datos de un formulario y los encripta y luego los transforma a objeto para usar con req.body
+*/
+app.use(express.urlencoded({extended: true}));
+
+/*
+middleware de sesión:
+- Crea una sesión (ficha) en el servidor para el usuario y le da una cookie con su ID.
+- secret: Firma digital para que el cliente no pueda falsificar su cookie de sesión.
+- resave: Evita guardar la sesión en cada petición si no hubo cambios.
+- saveUninitialized: No crea sesiones para usuarios que no se han logueado.
+- cookie (maxAge): Tiempo que dura la cookie viva en el navegador (10 minutos).
+*/
+app.use(session({
+    secret: environments.sessionSecret, 
+    resave: false, 
+    saveUninitialized: false,
+    cookie: { maxAge: 600000 } 
+}));
+
 
 /*
 creamos un middleware para leer los archivos de la carpeta public(css, imagenes, etc)
@@ -65,6 +91,37 @@ app.get("/admin/login", (req, res) => {
     res.render("login");
 });
 
+/*
+- endpoint en donde hacemos un post al servidor pidiendolé si el usuario existe en la DB, para eso desestructuramos el correo y la contraseña atrapadas con el middleware "express.urlencoded".
+- .query hace la petición a la base de datos, y nos devuelve todo el objeto usuario o undefined
+*/
+app.post("/admin/login", async (req, res) => {
+    const {correo, contrasena} = req.body;
+
+    try{
+        const [rows] = await connection.query("SELECT * FROM usuarios WHERE correo = ?", [correo]);
+        const usuario = rows[0];
+        if (usuario === undefined){
+            return res.render("login", { error: "El correo electrónico no existe." }); //renderizamos en la misma página el error porque el usuario ingresado no existe
+
+        }else if (usuario){
+            const contrasenaValida = await bcrypt.compare(contrasena, usuario.contrasena); //validamos la contraseña
+
+            if(!contrasenaValida){
+                return res.render("login", {error: "contraseña incorrecta"});
+            }
+
+            req.session.usuario = {
+                id: usuario.id,
+                correo: usuario.correo
+            }//usamos el middleware session para guardar los datos del usuario
+            res.redirect("/admin/dashboard");
+
+        }
+    }catch(error){
+        console.log(error);
+    }
+});
 
 /*
 .listen: metodo de express que abre el puerto especificado en el servidor, y escucha cualquier conexion de red entrante
