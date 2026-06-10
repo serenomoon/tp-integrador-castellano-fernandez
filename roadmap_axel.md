@@ -18,7 +18,7 @@ Este documento detalla las tareas asignadas a Axel para el TP Integrador "Autose
 - [x] **3.1. Pantalla de Login (`/admin/login`)**:
   - Formulario de inicio de sesión con validación de credenciales en la base de datos.
   - Botón de Acceso Rápido para autocompletar usuario de prueba con un clic.
-- [ ] **3.3. Alta de Producto (`/admin/productos/nuevo`)**:
+- [x] **3.3. Alta de Producto (`/admin/productos/nuevo`)**:
   - Formulario para cargar datos y subida de imagen física al servidor usando `multer`.
 - [ ] **3.3. Modificación de Producto (`/admin/productos/editar/:id`)**:
   - Interfaz de edición precargada con opción de actualizar la imagen.

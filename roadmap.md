@@ -63,7 +63,7 @@ graph TD
 
 ### Etapa 3: Back-Office Administrativo (EJS - Backend) 🔐
 *La administración utiliza un enfoque mixto: interfaz renderizada por el servidor con vistas HTML (EJS) y persistencia conectada a la base de datos.*
-- [ ] **3.1. Pantalla de Login (`/admin/login`):** [Responsable: Axel]
+- [x] **3.1. Pantalla de Login (`/admin/login`):** [Responsable: Axel]
   - Formulario de ingreso que valide el correo y contraseña en la base de datos.
   - **Requisito del PDF:** Implementar un **Botón de Acceso Rápido** que autocomplete las credenciales del tester/profesor con un solo clic.
 - [ ] **3.2. Dashboard de Administración (`/admin/dashboard`):** [Responsable: Saulo]
