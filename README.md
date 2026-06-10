@@ -79,9 +79,16 @@ Tener un servidor local de **MySQL** o **MariaDB** instalado y corriendo en su s
    DB_USER=root
    DB_PASSWORD=tu_contraseña_de_mysql
    DB_NAME=tp_autoservicio
+   SESSION_SECRET=clave_secreta_para_las_cookies
    ```
 
-### 4. Arrancar en Modo Desarrollo
+### 4. Crear el Usuario Administrador (Seed)
+Para poder iniciar sesión en el panel administrador con las credenciales de prueba, ejecute el script de semillado en su terminal (dentro de la carpeta `backend/`):
+```bash
+node src/api/database/seed.js
+```
+
+### 5. Arrancar en Modo Desarrollo
 Ejecute el siguiente comando dentro de la carpeta `backend/` para iniciar el servidor con reinicios automáticos mediante `nodemon`:
 ```bash
 npm run dev
