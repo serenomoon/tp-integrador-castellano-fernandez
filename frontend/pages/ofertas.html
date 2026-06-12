@@ -60,7 +60,7 @@
         <main>
             <section class="secccion-productos">
                 <h1 id="bienvenida"></h1>
-                <h2>Elegi que queres llevar</h2>
+                <h2>Ofertas re locas!</h2>
                 <div id="contenedor-productos"></div>
             </section>
         </main>
@@ -91,32 +91,9 @@
             <h3>By Axel Castellano - Saulo Fernández ™</h3>
         </footer>
     </div>
-
-    <!-- Modal de Confirmación de Compra -->
-    <div id="modalConfirmacion" class="modal-overlay">
-        <div class="modal-card">
-            <h2>Confirmar Compra</h2>
-            <p>¿Estás seguro de que deseas finalizar tu compra?</p>
-            <div class="modal-buttons">
-                <button id="btnConfirmarSi" class="btn btn-confirm">Sí, confirmar</button>
-                <button id="btnConfirmarNo" class="btn btn-cancel">Cancelar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Alerta / Error Personalizado -->
-    <div id="modalAlerta" class="modal-overlay">
-        <div class="modal-card">
-            <h2 id="alertaTitulo">Atención</h2>
-            <p id="alertaMensaje">Mensaje de la alerta.</p>
-            <div class="modal-buttons">
-                <button id="btnAlertaAceptar" class="btn btn-confirm">Aceptar</button>
-            </div>
-        </div>
-    </div>
         
-    <script>
-        //Obtener nombre
+        <script>
+            //Obtener nombre
         const nombre = localStorage.getItem("nombreUsuario");
 
         if (nombre) {
@@ -226,6 +203,6 @@
     <script src="../js/productos.js"></script>
     <script src="../js/theme.js"></script>
 
-    <script src="../js/carrito.js"></script>
 </body>
+
 </html>
