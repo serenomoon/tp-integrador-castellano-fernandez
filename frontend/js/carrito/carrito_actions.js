@@ -40,11 +40,11 @@ async function confirmarCompra() {
 
         if (!response.ok) throw new Error("Error al guardar la venta");
 
-        
         cerrarModalConfirmacion();
-        generarTicketPDF(venta);
+        localStorage.setItem("ultimoTicket", JSON.stringify(venta));
         vaciarCarrito();
-        mostrarAlerta("Compra exitosa", "¡Gracias por tu compra! 🎉");
+        window.location.href = "./ticket.html";
+
         
     } catch (error) {
         console.error(error);

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/productos.css" rel="stylesheet" />
+    <link href="../css/cards.css" rel="stylesheet" />
+    <title>"No hay Polque" Store - Ticket de Compra</title>
+
+    <link href="../css/ticket.css" rel="stylesheet" />
+
+    <script>
+        (function () {
+            const nombreUsuario = localStorage.getItem("nombreUsuario");
+            if (!nombreUsuario) {
+                window.location.href = "../index.html";
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <img src="../assets/img/logo_tienda.png" alt="logo no hay polque">
+            </div>
+            <ul class="enlaces">
+                <li class="enlace"><a href="./productos.html"><span>PRODUCTOS</span></a></li>
+                <li class="enlace"><a href="./ofertas.html"><span>OFERTAS</span></a></li>
+                <li class="enlace"><a href="./carrito.html"><span>CARRITO</span></a></li>
+                <li class="enlace"><button id="boton-salir">SALIR</button></li>
+            </ul>
+        </header>
+
+
+        <main>
+            <section class="seccion-ticket">
+                <div>
+                    <h1 id="bienvenida"></h1>
+                    <div class="seccion-ticket-banner">
+                        <h2>¡Compra Finalizada!</h2>
+                    </div>
+                </div>
+
+
+                <!-- Boleta de Papel -->
+                <div class="ticket-contenedor" id="boleta-papel">
+                    <!-- Cargado dinámicamente con JS -->
+                    Cargando comprobante...
+                </div>
+
+                <!-- Acciones -->
+                <div class="ticket-acciones">
+                    <button id="btn-descargar-pdf" class="btn-ticket btn-descargar">Descargar PDF</button>
+                    <button id="btn-salir-ticket" class="btn-ticket btn-salir">Salir</button>
+                </div>
+            </section>
+        </main>
+
+        <div class="theme-button" id="themeToggle">
+            <div class="theme-container">
+                <div class="theme-circle" id="themeCircle">
+                    <div>
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3>By Axel Castellano - Saulo Fernández ™</h3>
+        </footer>
+    </div>
+
+    <!-- Carga de librerías y scripts -->
+    <script src="../js/ticket.js"></script>
+    <script src="../js/ui/theme.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nombre = localStorage.getItem("nombreUsuario");
+            const bienvenida = document.getElementById("bienvenida");
+            if (nombre && bienvenida) {
+                bienvenida.textContent = `GRACIAS ${nombre.toUpperCase()}`;
+            }
+
+            const ultimoTicketRaw = localStorage.getItem("ultimoTicket");
+            if (!ultimoTicketRaw) {
+                window.location.href = "./productos.html";
+                return;
+            }
+
+            const venta = JSON.parse(ultimoTicketRaw);
+            const boleta = document.getElementById("boleta-papel");
+
+            // Renderizar la boleta en el HTML
+            boleta.innerHTML = `
+                <div class="ticket-header">
+                    <h2>No hay Polque Store</h2>
+                    <p>Comprobante de Pago</p>
+                    <p>Fecha: ${venta.fecha}</p>
+                    <p>Cliente: ${venta.cliente}</p>
+                </div>
+                
+                <table class="ticket-tabla">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cant</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${venta.items.map(item => `
+                            <tr>
+                                <td>${item.nombre}</td>
+                                <td>${item.cantidad}</td>
+                                <td>$${item.precio_unitario}</td>
+                                <td>$${item.subtotal}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+                
+                <div class="ticket-total">
+                    TOTAL: $${venta.total}
+                </div>
+                
+                <div class="ticket-footer">
+                    <p>Gracias por tu compra</p>
+                    <p>"Y recordá, si te cae mal, No hay polque!"</p>
+                </div>
+            `;
+
+            // Botón Descargar PDF
+            document.getElementById("btn-descargar-pdf").addEventListener("click", function () {
+                if (typeof generarTicketPDF === 'function') {
+                    generarTicketPDF(venta);
+                }
+            });
+
+            // Botón Salir (Limpia sesión e inicializa)
+            document.getElementById("btn-salir-ticket").addEventListener("click", function () {
+                localStorage.removeItem("ultimoTicket");
+                
+                // NOTA DE FINAL DE TP: En el futuro acá se agregará la redirección obligatoria a la encuesta (E.1)
+                // Por ahora limpia y vuelve al index.
+                localStorage.removeItem("nombreUsuario");
+                localStorage.removeItem("carrito");
+                window.location.href = "../index.html";
+            });
+
+            // Botón navbar Salir
+            const btnNavbarSalir = document.getElementById("boton-salir");
+            if (btnNavbarSalir) {
+                btnNavbarSalir.addEventListener("click", function () {
+                    localStorage.removeItem("nombreUsuario");
+                    localStorage.removeItem("ultimoTicket");
+                    localStorage.removeItem("carrito");
+                    window.location.href = "../index.html";
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

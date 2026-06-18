@@ -28,10 +28,11 @@ Este documento detalla las tareas asignadas a Axel para el TP Integrador "Autose
   - Lógica del carrito en JS (agregar, modificar cantidades, y eliminar).
 - [x] **4.2.4. Confirmación de Compra**:
   - Modal de confirmación y envío de datos a la API (`POST /api/ventas`).
-- [ ] **4.2.5. Pantalla de Ticket**:
+- [x] **4.2.5. Pantalla de Ticket**:
   - Mostrar detalle de lo comprado y botón para descargar el ticket en PDF.
-- [ ] **4.2.6. Reinicio de Flujo**:
+- [x] **4.2.6. Reinicio de Flujo**:
   - Botón "Salir" que limpia el estado y redirige a la bienvenida.
+
 
 ## 🔌 Integración y Conexión Backend-Frontend (Nuevas Tareas)
 - [x] **I.1. Endpoints de Cliente en Backend**: Implementar las rutas y controladores para `GET /api/productos` (productos activos de la base de datos) y `POST /api/ventas` (registro de venta y detalle en la BD).
