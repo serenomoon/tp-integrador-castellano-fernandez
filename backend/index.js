@@ -12,6 +12,7 @@ import environments from "./src/api/config/environments.js";
 import connection from "./src/api/database/db.js";
 import session from "express-session";
 import adminRouter from "./src/api/routes/adminRoutes.js";
+import apiRouter from "./src/api/routes/apiRoutes.js";
 
 const app = express(); // guardamos el objeto express
 const PORT = environments.port; //guardamos el puerto desde environments
@@ -51,6 +52,9 @@ creamos un middleware para leer los archivos de la carpeta public(css, imagenes,
 */
 app.use(express.static("public"));
 
+//le permitimos a express poder ver el front en el puerto del localhost configurado
+app.use(express.static("../frontend"));
+
 /*
 - el servidor escucha peticiones (GET) cuando se escribe la URL en el navegador.
 - "/" es la raiz del servidor
@@ -87,6 +91,9 @@ app.get("/test-db", async (req, res) => {
 
 // Rutas del panel administrativo montadas bajo "/admin"
 app.use("/admin", adminRouter);
+
+//Rutas de nuestra API
+app.use("/api", apiRouter);
 
 /*
 .listen: metodo de express que abre el puerto especificado en el servidor, y escucha cualquier conexion de red entrante

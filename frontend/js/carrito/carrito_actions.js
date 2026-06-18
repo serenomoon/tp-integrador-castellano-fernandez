@@ -32,13 +32,14 @@ async function confirmarCompra() {
     
     try {
         // Enviar a la API
-        // const response = await fetch("/api/ventas", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(venta)
-        // });
-        
-        // if (!response.ok) throw new Error("Error al guardar la venta");
+        const response = await fetch("http://localhost:3000/api/ventas", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(venta)
+        });
+
+        if (!response.ok) throw new Error("Error al guardar la venta");
+
         
         cerrarModalConfirmacion();
         generarTicketPDF(venta);

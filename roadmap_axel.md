@@ -33,8 +33,15 @@ Este documento detalla las tareas asignadas a Axel para el TP Integrador "Autose
 - [ ] **4.2.6. Reinicio de Flujo**:
   - Botón "Salir" que limpia el estado y redirige a la bienvenida.
 
+## 🔌 Integración y Conexión Backend-Frontend (Nuevas Tareas)
+- [x] **I.1. Endpoints de Cliente en Backend**: Implementar las rutas y controladores para `GET /api/productos` (productos activos de la base de datos) y `POST /api/ventas` (registro de venta y detalle en la BD).
+- [x] **I.2. Integrar Catálogo Dinámico**: Reemplazar los productos hardcodeados en `productos.html` por un `fetch` dinámico al backend.
+- [x] **I.3. Integrar Registro de Compras**: Descomentar y conectar la función `confirmarCompra()` en `carrito_actions.js` para enviar la venta a la API mediante `POST`.
+
+
 ## 🎓 Requerimientos de Final (Adicionales)
 - [ ] **E.1.** Redirección obligatoria a Encuesta al hacer clic en Salir del ticket.
 - [ ] **E.2.** Formulario de Encuesta con 5 tipos de inputs (textarea, email, checkbox, slider, file).
 - [ ] **E.3.** Validaciones de encuesta, opción "Omitir", modal de agradecimiento e inserción en base de datos.
 - [ ] **E.4.** Pantalla de Detalle de Producto por ID (`/productos/:id`).
+
