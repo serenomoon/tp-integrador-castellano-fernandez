@@ -7,9 +7,9 @@ Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autos
 ## 🗄️ Etapa 2: API JSON (Backend)
 - [ ] **2.3. Endpoints API JSON (Respuestas en formato JSON)**:
   - [ ] `POST /api/admin/setup` (registro de usuario admin encriptado).
-  - [ ] `GET /api/productos` (catálogo paginado de productos activos).
+  - [x] `GET /api/productos` (catálogo paginado de productos activos) - *Implementado por Axel*.
   - [ ] `GET /api/productos/:id` (detalle del producto).
-  - [ ] `POST /api/ventas` (registro de una venta en base de datos).
+  - [x] `POST /api/ventas` (registro de una venta en base de datos) - *Implementado por Axel*.
   - [ ] `GET /api/ventas` (historial de ventas con productos - Eager Loading).
 - [ ] **2.4. Middlewares de Validación**:
   - Validar datos obligatorios, formatos de email y precios positivos en peticiones POST/PUT.
@@ -26,17 +26,17 @@ Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autos
   - Botón para descargar el historial de ventas en formato `.xlsx` usando la librería `xlsx`.
 
 ## 📱 Etapa 4: Frontend del Cliente (Autoservicio)
-- [ ] **4.1. Estilos y Temas**:
+- [x] **4.1. Estilos y Temas**:
   - CSS moderno con variables para Tema Claro y Oscuro.
   - Switch de cambio de tema con persistencia en `localStorage`.
-- [ ] **4.2.1. Pantalla de Bienvenida**:
+- [x] **4.2.1. Pantalla de Bienvenida**:
   - Input para ingresar nombre del cliente y validación para avanzar.
-- [ ] **4.2.2. Catálogo de Productos**:
+- [x] **4.2.2. Catálogo de Productos**:
   - Renderizar productos activos ordenados por categoría, controles de cantidad y descripción.
 
 ## 🎓 Requerimientos de Final (Adicionales)
 - [ ] **E.5. Registros y Auditoría**:
-  - Nueva sección de auditoría en el panel de administrador.
+  - Nueva sección de auditoría en el panel de auditoría.
 - [ ] **E.6. Sistema de Logs**:
   - Registrar en base de datos logins de administradores exitosos (fecha, hora, usuario).
 - [ ] **E.7. Monitoreo de Logs**:
@@ -45,3 +45,4 @@ Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autos
   - Mostrar Top 10 más vendidos, Top 10 ventas más caras y al menos dos métricas de negocio extra.
 - [ ] **E.9. Descarga de Encuestas**:
   - Botón para exportar todas las encuestas respondidas a formato `.xlsx`.
+
