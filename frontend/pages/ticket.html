@@ -148,15 +148,9 @@
                 }
             });
 
-            // Botón Salir (Limpia sesión e inicializa)
+            // Botón Salir (Redirige obligatoriamente a la encuesta)
             document.getElementById("btn-salir-ticket").addEventListener("click", function () {
-                localStorage.removeItem("ultimoTicket");
-                
-                // NOTA DE FINAL DE TP: En el futuro acá se agregará la redirección obligatoria a la encuesta (E.1)
-                // Por ahora limpia y vuelve al index.
-                localStorage.removeItem("nombreUsuario");
-                localStorage.removeItem("carrito");
-                window.location.href = "../index.html";
+                window.location.href = "./encuesta.html";
             });
 
             // Botón navbar Salir

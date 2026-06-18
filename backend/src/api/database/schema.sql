@@ -31,4 +31,15 @@ CREATE TABLE IF NOT EXISTS ventas_productos (
     FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
 
+CREATE TABLE IF NOT EXISTS encuestas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_email VARCHAR(255) NOT NULL,
+    opinion TEXT,
+    recomienda TINYINT(1) DEFAULT 0,
+    puntuacion TINYINT NOT NULL,
+    archivoUrl VARCHAR(255),
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
 

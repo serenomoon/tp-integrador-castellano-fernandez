@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <link href="../css/productos.css" rel="stylesheet" />
+    <link href="../css/cards.css" rel="stylesheet" />
+    <link href="../css/encuesta.css" rel="stylesheet" />
+    <title>"No hay Polque" Store - Encuesta de Satisfacción</title>
+
+    <script>
+        (function () {
+            const nombreUsuario = localStorage.getItem("nombreUsuario");
+            if (!nombreUsuario) {
+                window.location.href = "../index.html";
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <header></header>
+
+        <main>
+            <section class="seccion-encuesta">
+                <div>
+                    <h1 id="bienvenida"></h1>
+                    <div class="seccion-encuesta-banner">
+                        <h2>Contanos tu experiencia</h2>
+                    </div>
+                </div>
+
+                <div class="encuesta-card">
+                    <form id="formEncuesta" enctype="multipart/form-data">
+                        
+                        <!-- 1. Input Email -->
+                        <div class="form-grupo">
+                            <label for="email">Tu correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <!-- 2. Input Slider (Range) -->
+                        <div class="form-grupo">
+                            <label for="puntuacion">¿Qué nota nos ponés? (1 al 10) *</label>
+                            <div class="slider-contenedor">
+                                <input type="range" id="puntuacion" name="puntuacion" min="1" max="10" value="10">
+                                <span id="valor-puntuacion">10</span>
+                            </div>
+                        </div>
+
+                        <!-- 3. Input Checkbox -->
+                        <div class="form-grupo checkbox-grupo">
+                            <input type="checkbox" id="recomienda" name="recomienda" value="1" checked>
+                            <label for="recomienda">¿Recomendarías nuestro servicio a tus amigos?</label>
+                        </div>
+
+                        <!-- 4. Input Textarea -->
+                        <div class="form-grupo">
+                            <label for="opinion">Contanos qué te pareció el servicio (opcional)</label>
+                            <textarea id="opinion" name="opinion" placeholder="Tu opinión nos ayuda a mejorar..." rows="4"></textarea>
+                        </div>
+
+                        <!-- 5. Input File (Subida de Imagen) -->
+                        <div class="form-grupo">
+                            <label for="archivo">Subir foto del local o ticket (opcional)</label>
+                            <input type="file" id="archivo" name="archivo" accept="image/*">
+                            <p class="ayuda-input">Formatos permitidos: JPG, PNG, WEBP.</p>
+                        </div>
+
+                        <div class="encuesta-botones">
+                            <button type="submit" class="btn-encuesta btn-enviar">Enviar Encuesta</button>
+                            <button type="button" id="btn-omitir" class="btn-encuesta btn-omitir">Omitir encuesta</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <div class="theme-button" id="themeToggle">
+            <div class="theme-container">
+                <div class="theme-circle" id="themeCircle">
+                    <div>
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer></footer>
+    </div>
+
+    <!-- Modal de Agradecimiento -->
+    <div id="modalAgradecimiento" class="modal-overlay">
+        <div class="modal-card">
+            <h2>¡Muchas Gracias! 🎉</h2>
+            <p>Tu opinión es sumamente valiosa para nosotros y nos ayuda a seguir mejorando día a día.</p>
+            <div class="modal-buttons">
+                <button id="btnAgradecimientoCerrar" class="btn btn-confirm">Volver al Inicio</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Alerta / Error -->
+    <div id="modalAlerta" class="modal-overlay">
+        <div class="modal-card">
+            <h2 id="alertaTitulo">Atención</h2>
+            <p id="alertaMensaje">Mensaje de la alerta.</p>
+            <div class="modal-buttons">
+                <button id="btnAlertaAceptar" class="btn btn-confirm">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga de Scripts -->
+    <script src="../js/ui/theme.js"></script>
+    <script src="../js/ui/load_components.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nombre = localStorage.getItem("nombreUsuario");
+            const bienvenida = document.getElementById("bienvenida");
+            if (nombre && bienvenida) {
+                bienvenida.textContent = `HOLA ${nombre.toUpperCase()}`;
+            }
+
+            // Actualizar visualmente el valor del slider
+            const slider = document.getElementById("puntuacion");
+            const valorSpan = document.getElementById("valor-puntuacion");
+            slider.addEventListener("input", function () {
+                valorSpan.textContent = this.value;
+            });
+
+            // Función para limpiar la sesión del usuario al salir
+            function finalizarFlujo() {
+                localStorage.removeItem("nombreUsuario");
+                localStorage.removeItem("carrito");
+                localStorage.removeItem("ultimoTicket");
+                window.location.href = "../index.html";
+            }
+
+            // Omitir Encuesta
+            document.getElementById("btn-omitir").addEventListener("click", function () {
+                finalizarFlujo();
+            });
+
+
+            // Alerta personalizada
+            function mostrarAlerta(titulo, mensaje) {
+                document.getElementById("alertaTitulo").textContent = titulo;
+                document.getElementById("alertaMensaje").textContent = mensaje;
+                document.getElementById("modalAlerta").style.display = "flex";
+            }
+
+            document.getElementById("btnAlertaAceptar").addEventListener("click", function() {
+                document.getElementById("modalAlerta").style.display = "none";
+            });
+
+            // Envío del Formulario
+            const form = document.getElementById("formEncuesta");
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                // Validaciones adicionales del lado del cliente
+                const email = document.getElementById("email").value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    mostrarAlerta("Error de validación", "Por favor, ingresá un correo electrónico válido.");
+                    return;
+                }
+
+                // Usamos FormData porque vamos a enviar un archivo binario
+                const formData = new FormData(this);
+
+                try {
+                    const response = await fetch("http://localhost:3000/api/encuestas", {
+                        method: "POST",
+                        body: formData // Fetch setea automáticamente el Content-Type para multipart/form-data
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error || "Error al enviar la encuesta.");
+                    }
+
+                    // Mostrar modal de agradecimiento
+                    document.getElementById("modalAgradecimiento").style.display = "flex";
+
+                } catch (error) {
+                    console.error(error);
+                    mostrarAlerta("Error", error.message || "No se pudo enviar la encuesta. Intentá de nuevo.");
+                }
+            });
+
+            // Botón cerrar modal de agradecimiento
+            document.getElementById("btnAgradecimientoCerrar").addEventListener("click", function () {
+                document.getElementById("modalAgradecimiento").style.display = "none";
+                finalizarFlujo();
+            });
+        });
+    </script>
+</body>
+
+</html>
