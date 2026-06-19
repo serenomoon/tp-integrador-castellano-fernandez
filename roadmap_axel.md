@@ -46,4 +46,17 @@ Este documento detalla las tareas asignadas a Axel para el TP Integrador "Autose
 - [x] **E.3.** Validaciones de encuesta, opción "Omitir", modal de agradecimiento e inserción en base de datos.
 - [ ] **E.4.** Pantalla de Detalle de Producto por ID (`/productos/:id`).
 
+## ⚡ Optimizaciones de la Cátedra (Pendientes)
+- [x] **O.1. Limitar campos en consultas SQL:** Reemplazar los `SELECT *` por la selección explícita de campos (`SELECT id, nombre, precio...`) en las consultas de la API y de administración para cuidar el ancho de banda y memoria.
+- [x] **O.2. Middleware de validación de IDs (`validateId`):** Implementar un middleware que limpie y valide que los IDs recibidos en los parámetros de ruta sean números enteros positivos antes de consultar la base de datos, retornando `400 Bad Request` si no lo son.
+- [x] **O.3. Estandarización de respuestas con `payload`:** Envolver las respuestas JSON del backend que devuelven colecciones o recursos bajo la propiedad `payload` (para alinearse con el formato del profe y su bitácora).
+
+
+  - *Lugares a modificar en el Backend:*
+    - [apiController.js:L20](file:///home/axel/Escritorio/UTN/programacion3-tpIntegrador/backend/src/api/controllers/apiController.js#L20) en `getProductos` (cambiar `res.json(productosMapeados)` por `{ payload: productosMapeados, total: productosMapeados.length }`).
+  - *Lugares a modificar en el Frontend (para no romper la UI al cambiar la API):*
+    - En los archivos JS del frontend donde se haga `fetch` a `/api/productos` (por ejemplo, en el catálogo para iterar sobre `data.payload` en vez de `data` directamente).
+
+
+
 

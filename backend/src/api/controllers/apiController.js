@@ -4,7 +4,7 @@ import connection from "../database/db.js";
 export const getProductos = async (req, res) => {
     try{
         const activo = true;
-        const [rows] = await connection.query("SELECT * FROM productos WHERE activo = ?", [activo]);
+        const [rows] = await connection.query("SELECT id, nombre, precio, imagenUrl, categoria FROM productos WHERE activo = ?", [activo]);
         
         //Este quilombo es gracias a Saulo que se cagó en el español que manejamos en la DB
         const productosMapeados = rows.map(prod => {
@@ -17,7 +17,10 @@ export const getProductos = async (req, res) => {
                 type: prod.categoria === 'Pantalones' ? 'oferta' : 'normal'
             };
         });
-        return res.json(productosMapeados);
+        return res.json({
+            payload: productosMapeados,
+            total: productosMapeados.length
+        });
         
     }catch(error){
         res.status(500).json({error: error.message})

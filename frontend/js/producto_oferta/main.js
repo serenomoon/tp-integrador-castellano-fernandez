@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     try{
         const response = await fetch("http://localhost:3000/api/productos")
 
-        productos = await response.json();
+        const data = await response.json();
+
+        productos = data.payload;
 
         localStorage.setItem("productos", JSON.stringify(productos))
         

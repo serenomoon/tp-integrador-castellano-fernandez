@@ -45,7 +45,7 @@ endpoint TEMPORAL para mostrar el dashboard
 */
 export const getDashboard = async (req, res) => {
     try{
-        const [productos] = await connection.query("SELECT * FROM productos");
+        const [productos] = await connection.query("SELECT id, nombre, precio FROM productos");
 
         // Armamos un HTML básico
         let html = "<h1>Dashboard Temporal (Axel & Saulo)</h1>";
@@ -101,7 +101,7 @@ export const postNuevoProducto = async (req, res) => {
 
 // Agregamos el GET de editar producto para traernos todos los datos de la DB del producto a editar
 export const getEditarProducto = async (req, res) => {
-    const { id } = req.params;
+    const id = req.id;
     try {
         const [rows] = await connection.query("SELECT * FROM productos WHERE id = ?", [id]);
         const producto = rows[0];
@@ -121,7 +121,7 @@ export const getEditarProducto = async (req, res) => {
 Endpoint para enviar al servidor los datos de la edición del producto
 */
 export const postEditarProducto = async (req, res) => {
-    const { id } = req.params;
+    const id = req.id;
     const { nombre, descripcion, precio, categoria } = req.body;
 
     try {

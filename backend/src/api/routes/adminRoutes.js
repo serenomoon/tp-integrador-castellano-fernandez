@@ -9,6 +9,7 @@ import {
     getDashboard
 } from "../controllers/adminController.js";
 import { upload } from "../middlewares/upload.js";
+import { validateID } from "../middlewares/validateId.js";
 
 const router = express.Router();
 
@@ -23,7 +24,7 @@ router.get("/dashboard", getDashboard);
 router.get("/productos/nuevo", getNuevoProducto);
 router.post("/productos/nuevo", upload.single("imagen"), postNuevoProducto);
 
-router.get("/productos/editar/:id", getEditarProducto);
-router.post("/productos/editar/:id", upload.single("imagen"), postEditarProducto);
+router.get("/productos/editar/:id", validateID, getEditarProducto);
+router.post("/productos/editar/:id", validateID, upload.single("imagen"), postEditarProducto);
 
 export default router;
