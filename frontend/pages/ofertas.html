@@ -15,50 +15,13 @@
     <link href="../css/cards.css" rel="stylesheet" />
     <title>"No hay Polque" Store - Ofertas</title>
 
-    <script>
-        (function () {
-            const nombreUsuario = localStorage.getItem("nombreUsuario");
-            if (!nombreUsuario) {
-                window.location.href = "../index.html";
-            }
-        })();
-    </script>
+    <script src="../js/verificar_sesion.js"></script>
 </head>
 
 <body>
     <div class="content">
 
-        <header>
-            <div class="logo">
-                <img src="../assets/img/logo_tienda.png" alt="logo no hay polque">
-            </div>
-
-            <ul class="enlaces">
-                <li class="enlace">
-                    <a href="./productos.html">
-                        <span>PRODUCTOS</span>
-                    </a>
-                </li>
-
-                <li class="enlace">
-                    <a href="./ofertas.html">
-                        <span>OFERTAS</span>
-                    </a>
-                </li>
-
-                <li class="enlace">
-                    <a href="./carrito.html">
-                        <span>CARRITO</span>
-                    </a>
-                </li>
-
-                <li class="enlace">
-                    <button id="boton-salir">SALIR</button>
-                </li>
-
-            </ul>
-        </header>
-
+        <header></header>
 
         <main>
             <section class="seccion-productos">
@@ -96,9 +59,7 @@
             <span class="carrito-contador" id="carritoContador" style="display: none;">0</span>
         </a>
 
-        <footer>
-            <h3>By Axel Castellano - Saulo Fernández ™</h3>
-        </footer>
+        <footer></footer>
     </div>
 
     <script src="../js/ui/load_components.js"></script>

@@ -11,10 +11,14 @@ import cors from "cors";
 import environments from "./src/api/config/environments.js";
 import connection from "./src/api/database/db.js";
 import session from "express-session";
-import adminRouter from "./src/api/routes/adminRoutes.js";
-import apiRouter from "./src/api/routes/apiRoutes.js";
 import path from "path";
+
 import { validateID } from "./src/api/middlewares/validateId.js";
+
+import adminRoutes from "./src/api/routes/admin.routes.js";
+import productosRoutes from "./src/api/routes/productos.routes.js";
+import encuestasRoutes from "./src/api/routes/encuestas.routes.js";
+import ventasRoutes from "./src/api/routes/ventas.routes.js";
 
 
 const app = express(); // guardamos el objeto express
@@ -93,15 +97,20 @@ app.get("/test-db", async (req, res) => {
 });
 
 // Rutas del panel administrativo montadas bajo "/admin"
-app.use("/admin", adminRouter);
+app.use("/admin", adminRoutes);
 
 //Rutas de nuestra API
-app.use("/api", apiRouter);
+// app.use("/api", apiRouter);
+app.use('/api/productos', productosRoutes);
+
+app.use('/api/encuestas', encuestasRoutes);
+
+app.use('/api/ventas', ventasRoutes);
 
 // Ruta para la página de detalle del producto
-app.get("/productos/:id", validateID, (req, res) => {
-    res.sendFile(path.resolve("../frontend/pages/detalle.html")); // la ruta correcta del archivo
-});
+// app.get("/productos/:id", validateID, (req, res) => {
+//     res.sendFile(path.resolve("../frontend/pages/detalle.html")); // la ruta correcta del archivo
+// });
 
 
 /*
