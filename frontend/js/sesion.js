@@ -60,16 +60,11 @@ if (esIndex) {
 
 // Si es otra pagina chqueo el nombre
 else {
-    const nombre = localStorage.getItem("nombreUsuario");
-    
-    if (!nombre) {
-        window.location.href = "./index.html";
-    } else {
-        document.addEventListener("DOMContentLoaded", () => {
-            const bienvenida = document.getElementById("bienvenida");
-            if (bienvenida) {
-                bienvenida.textContent = `HOLA ${nombre.toUpperCase()}`;
-            }
-        });
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+        const nombre = localStorage.getItem("nombreUsuario");
+        const bienvenida = document.getElementById("bienvenida");
+        if (bienvenida && nombre) {
+            bienvenida.textContent = `HOLA ${nombre.toUpperCase()}`;
+        }
+    });
 }

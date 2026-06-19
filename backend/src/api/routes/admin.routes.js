@@ -7,7 +7,7 @@ import {
     getEditarProducto, 
     postEditarProducto,
     getDashboard
-} from "../controllers/adminController.js";
+} from "../controllers/admin.controllers.js";
 import { upload } from "../middlewares/upload.js";
 import { validateID } from "../middlewares/validateId.js";
 
