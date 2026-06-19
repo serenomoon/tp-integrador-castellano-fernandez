@@ -1,4 +1,4 @@
-import connection from "../database/db.js";
+import encuestaModels from "../models/encuestaModels.js";
 
 //funcion API-Cliente para insertar en la DB la encuesta
 export const postEncuesta = async (req, res) => {
@@ -19,7 +19,13 @@ export const postEncuesta = async (req, res) => {
         const recomiendaNum = recomienda === "1" ? 1: 0;//convertimos la puntuacion a int
         const archivoUrl = req.file ? `/uploads/${req.file.filename}` : null;//verificamos si subió un archivo o no
 
-        const response = await connection.query("INSERT INTO encuestas (cliente_email, opinion, recomienda, puntuacion, archivoUrl) VALUES (?, ?, ?, ?, ?)", [email, opinion, recomiendaNum, nota, archivoUrl]);
+        const response = await encuestaModels.postEncuesta({
+            email,
+            opinion,
+            recomienda: recomiendaNum,
+            nota,
+            archivoUrl
+        });
 
         return res.status(201).json({
             status: "success",

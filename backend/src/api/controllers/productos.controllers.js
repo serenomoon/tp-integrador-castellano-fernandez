@@ -1,10 +1,9 @@
-import connection from "../database/db.js";
+import productModels from "../models/productModels.js";
 
 //funcion de nuestra API-Cliente que le va a devolver todos los productos al cliente
 export const getProductos = async (req, res) => {
     try{
-        const activo = true;
-        const [rows] = await connection.query("SELECT id, nombre, precio, imagenUrl, categoria FROM productos WHERE activo = ?", [activo]);
+        const rows = await productModels.getProductosActivos();
         
         //Este quilombo es gracias a Saulo que se cagó en el español que manejamos en la DB
         const productosMapeados = rows.map(prod => {
@@ -31,10 +30,9 @@ export const getProductos = async (req, res) => {
 
 export const getProdDescripcion = async (req, res) => {
     const id = req.id;
-    const activo = true;
     
     try{
-        const [rows] = await connection.query("SELECT id, nombre, descripcion, precio, imagenUrl, categoria FROM productos WHERE id = ? AND activo = ?", [id,activo]);
+        const rows = await productModels.getProductosId(id);
 
         if(rows.length === 0){
             return res.status(404).json({error: "No existe el producto"});
@@ -59,4 +57,3 @@ export const getProdDescripcion = async (req, res) => {
     }
 
 };
-
