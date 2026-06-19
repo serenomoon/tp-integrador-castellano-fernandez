@@ -8,7 +8,7 @@ Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autos
 - [ ] **2.3. Endpoints API JSON (Respuestas en formato JSON)**:
   - [ ] `POST /api/admin/setup` (registro de usuario admin encriptado).
   - [x] `GET /api/productos` (catálogo paginado de productos activos) - *Implementado por Axel*.
-  - [ ] `GET /api/productos/:id` (detalle del producto).
+  - [x] `GET /api/productos/:id` (detalle del producto) - *Implementado por Axel*.
   - [x] `POST /api/ventas` (registro de una venta en base de datos) - *Implementado por Axel*.
   - [ ] `GET /api/ventas` (historial de ventas con productos - Eager Loading).
 - [ ] **2.4. Middlewares de Validación**:
