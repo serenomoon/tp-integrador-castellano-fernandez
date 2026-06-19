@@ -6,10 +6,9 @@ async function cargarComponentesComunes() {
     const path = window.location.pathname;
     const esSubcarpeta = path.includes("/pages/") || path.includes("/productos/");
     
-    // Si estamos en la raíz (index.html), los recursos están en ./
-    // Si estamos en pages/ o productos/, los recursos están en ../
-    const basePath = esSubcarpeta ? "../" : "./";
-    const pagesPath = esSubcarpeta ? "./" : "./pages/";
+    // Usamos rutas absolutas desde la raíz para evitar problemas de carpetas virtuales
+    const basePath = "/";
+    const pagesPath = "/pages/";
     
     // 1. Cargar e Inyectar el Header (si el elemento existe en el HTML actual)
     if (headerElement) {

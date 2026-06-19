@@ -108,9 +108,9 @@ app.use('/api/encuestas', encuestasRoutes);
 app.use('/api/ventas', ventasRoutes);
 
 // Ruta para la página de detalle del producto
-// app.get("/productos/:id", validateID, (req, res) => {
-//     res.sendFile(path.resolve("../frontend/pages/detalle.html")); // la ruta correcta del archivo
-// });
+app.get("/productos/:id", validateID, (req, res) => {
+    res.sendFile(path.resolve("../frontend/pages/detalle.html")); // la ruta correcta del archivo
+});
 
 
 /*

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     console.log("ID del producto a buscar:", id);
 
         try {
-            const response = await fetch(`http://localhost:3000/api/producto/${id}`);
+            const response = await fetch(`http://localhost:3000/api/productos/${id}`);
             
             if (!response.ok) {
                 throw new Error("Producto no encontrado");
