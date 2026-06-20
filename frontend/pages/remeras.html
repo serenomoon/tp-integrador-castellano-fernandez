@@ -14,7 +14,7 @@
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/productos.css" rel="stylesheet" />
     <link href="../css/cards.css" rel="stylesheet" />
-    <title>"No hay Polque" Store - Ofertas</title>
+    <title>"No hay Polque" Store - Productos</title>
 
     <script src="../js/verificar_sesion.js"></script>
 </head>
@@ -28,8 +28,8 @@
             <section class="seccion-productos">
                 <div>
                     <h1 id="bienvenida"></h1>
-                    <div class="seccion-productos-banner" style="background-image: url('../assets/img/banner2.png')">
-                        <h2>¿Porque es tan barato?, no hay polque!</h2>
+                    <div class="seccion-productos-banner">
+                        <h2>¿Que vas a llevar?</h2>
                     </div>
                 </div>
                 <div id="contenedor-productos"></div>
@@ -37,10 +37,18 @@
         </main>
 
 
+        <section class="paginacion-section">
+            <div id="paginador-contenedor" class="paginador-flex"></div>
+        </section>
+
         <section class="mira-ofertas-section">
-            <div>
-                <p>EXTREMADAMENTE CERCA DE VENCER NO ES VENCIDO</p>
-            </div>
+            <a href="./pantalones.html" class="mira-ofertas">
+                <div>
+                    <h3>Mira nuestros pantalones</h3>
+                </div>
+                <div class="mira-ofertas-flecha">
+                    <div>➜</div>
+                </div>
             </a>
         </section>
 
@@ -64,12 +72,14 @@
     </div>
 
     <script src="../js/ui/load_components.js"></script>
+    <script src="../js/productos_provisorios.js"></script>
     <script src="../js/ui/theme.js"></script>
     <script src="../js/sesion.js"></script>
     <script src="../js/producto_oferta/agregar_carrito.js"></script>
+    <script src="../js/producto_oferta/renderizar_paginacion.js"></script>
     <script src="../js/producto_oferta/renderizar_producto.js"></script>
-    <script src="../js/producto_oferta/main.js"></script>
     <script src="../js/ui/contador_carrito.js"></script>
+    <script src="../js/producto_oferta/main.js"></script>
 </body>
 
 </html>

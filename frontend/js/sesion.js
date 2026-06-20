@@ -32,7 +32,7 @@ if (esIndex) {
 
     const nombreUsuario = localStorage.getItem("nombreUsuario");
     if (nombreUsuario) {
-        window.location.href = "./pages/productos.html";
+        window.location.href = "./pages/remeras.html";
     }
     
     document.addEventListener("DOMContentLoaded", () => {
@@ -53,7 +53,7 @@ if (esIndex) {
             }
             
             localStorage.setItem("nombreUsuario", resultado.name);
-            window.location.href = "./pages/productos.html";
+            window.location.href = "./pages/remeras.html";
         });
     });
 } 

@@ -14,7 +14,7 @@
     <link href="../css/navbar.css" rel="stylesheet" />
     <link href="../css/productos.css" rel="stylesheet" />
     <link href="../css/cards.css" rel="stylesheet" />
-    <title>"No hay Polque" Store - Productos</title>
+    <title>"No hay Polque" Store - Ofertas</title>
 
     <script src="../js/verificar_sesion.js"></script>
 </head>
@@ -28,8 +28,8 @@
             <section class="seccion-productos">
                 <div>
                     <h1 id="bienvenida"></h1>
-                    <div class="seccion-productos-banner">
-                        <h2>¿Que vas a llevar?</h2>
+                    <div class="seccion-productos-banner" style="background-image: url('../assets/img/banner2.png')">
+                        <h2>¿Porque es tan barato?, no hay polque!</h2>
                     </div>
                 </div>
                 <div id="contenedor-productos"></div>
@@ -37,15 +37,14 @@
         </main>
 
 
+        <section class="paginacion-section">
+            <div id="paginador-contenedor" class="paginador-flex"></div>
+        </section>
+
         <section class="mira-ofertas-section">
-            <a href="./ofertas.html" class="mira-ofertas">
-                <div>
-                    <h3>Mira nuestras ofertas</h3>
-                </div>
-                <div class="mira-ofertas-flecha">
-                    <div>➜</div>
-                </div>
-            </a>
+            <div>
+                <p>EXTREMADAMENTE CERCA DE VENCER NO ES VENCIDO</p>
+            </div>
         </section>
 
         <div class="theme-button" id="themeToggle">
@@ -68,7 +67,6 @@
     </div>
 
     <script src="../js/ui/load_components.js"></script>
-    <script src="../js/productos_provisorios.js"></script>
     <script src="../js/ui/theme.js"></script>
     <script src="../js/sesion.js"></script>
     <script src="../js/producto_oferta/agregar_carrito.js"></script>

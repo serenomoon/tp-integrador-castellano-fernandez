@@ -1,37 +1,35 @@
-document.addEventListener("DOMContentLoaded", async function() {
+let paginaActual = 1;
+let limiteProductos = 20;
 
-    // const nombre = localStorage.getItem("nombreUsuario");
-    // const bienvenida = document.getElementById("bienvenida");
-    // if (nombre && bienvenida) {
-    //     bienvenida.textContent = `HOLA ${nombre.toUpperCase()}`;
-    // }
-    
-    // const productos = JSON.parse(localStorage.getItem("productos")) || [];
-
+async function cargarProductos(pagina) {
     let productos = [];
     try{
-        const response = await fetch("http://localhost:3000/api/productos")
+        const path = window.location.pathname;
+        const categoria = path.includes("pantalones") ? "Pantalones" : "Remeras";
+
+        const response = await fetch(`http://localhost:3000/api/productos?page=${pagina}&limit=${limiteProductos}&categoria=${categoria}`);
 
         const data = await response.json();
-
         productos = data.payload;
+        const totalPaginas = data.totalPaginas;
 
-        localStorage.setItem("productos", JSON.stringify(productos))
+        if(path.includes("pantalones")){
+            renderizarProductos(productos, "oferta");
+        }else{
+            renderizarProductos(productos, "normal");
+        }
+
+        renderizarPaginacion(totalPaginas, pagina)
         
     }catch(error){
-
-        console.error("Error cargando productos de la API, usando backup:", error);
-
-        productos = JSON.parse(localStorage.getItem("productos")) || [];
+        console.error("Error cargando productos:", error);
     }
-    
-    const path = window.location.pathname;
-    if (path.includes("ofertas")) {
-        renderizarProductos(productos, "oferta");
-    } else {
-        renderizarProductos(productos, "normal");
-    }
-    
+}
+
+document.addEventListener("DOMContentLoaded", async function() {
+
+    await cargarProductos(paginaActual);    
+        
     const btnSalir = document.getElementById("boton-salir");
     if (btnSalir) {
         btnSalir.addEventListener("click", function() {

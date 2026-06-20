@@ -5,7 +5,7 @@ function renderizarCarrito() {
         contenedorCarrito.innerHTML = `
             <div class="carrito-vacio">
                 <p>🛒 Tu carrito está vacío</p>
-                <a href="./productos.html" class="btn-seguir-comprando">Seguir comprando</a>
+                <a href="./remeras.html" class="btn-seguir-comprando">Seguir comprando</a>
             </div>
         `;
         document.getElementById("total-precio").textContent = "$0";

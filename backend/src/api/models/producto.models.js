@@ -3,18 +3,18 @@ import connection from "../database/db.js";
 //creamos los modelos para las consultas SQL, de esta forma si mañana cambiamos la base de datos, no tenemos que cambiar todas las consultas en cada uno de los archivos
 
 //todos los productos activo=true
-export const getProductosActivos = async (limit, offset) => {
-    const sql = "SELECT id, nombre, precio, imagenUrl, categoria FROM productos WHERE activo = ? LIMIT ? OFFSET ?";
+export const getProductosActivos = async (categoria, limit, offset) => {
+    const sql = "SELECT id, nombre, precio, imagenUrl, categoria FROM productos WHERE activo = ? AND categoria = ? LIMIT ? OFFSET ?";
 
-    const [rows] = await connection.query(sql, [true, limit, offset]);
+    const [rows] = await connection.query(sql, [true, categoria, limit, offset]);
 
     return rows;
 };
 
-export const contarProductosActivos = async ()=> {
-    const sql = "SELECT COUNT(*) as total FROM productos WHERE activo = ?"
+export const contarProductosActivos = async (categoria)=> {
+    const sql = "SELECT COUNT(*) as total FROM productos WHERE activo = ? AND categoria = ?"
 
-    const [cantidad] = await connection.query(sql, [true]);
+    const [cantidad] = await connection.query(sql, [true, categoria]);
 
     return cantidad[0].total;
 }

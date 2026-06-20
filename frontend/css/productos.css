@@ -305,4 +305,62 @@
     }
 }
 
+/* --- ESTILOS DE PAGINACIÓN --- */
+.paginacion-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 60px 0;
+}
+
+.paginador-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.paginador-btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginador-btn:hover:not(:disabled) {
+    background-color: var(--amarillo-claro);
+    color: #4d3200;
+}
+
+.paginador-btn.active {
+    background-color: var(--amarillo-oscuro);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(246, 192, 66, 0.3);
+}
+
+.paginador-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.paginador-nav {
+    font-size: 1.2rem;
+    padding: 10px 14px;
+}
+
+
 
