@@ -3,13 +3,21 @@ import connection from "../database/db.js";
 //creamos los modelos para las consultas SQL, de esta forma si mañana cambiamos la base de datos, no tenemos que cambiar todas las consultas en cada uno de los archivos
 
 //todos los productos activo=true
-export const getProductosActivos = async () => {
-    const sql = "SELECT id, nombre, precio, imagenUrl, categoria FROM productos WHERE activo = ?";
+export const getProductosActivos = async (limit, offset) => {
+    const sql = "SELECT id, nombre, precio, imagenUrl, categoria FROM productos WHERE activo = ? LIMIT ? OFFSET ?";
 
-    const [rows] = await connection.query(sql, [true]);
+    const [rows] = await connection.query(sql, [true, limit, offset]);
 
     return rows;
 };
+
+export const contarProductosActivos = async ()=> {
+    const sql = "SELECT COUNT(*) as total FROM productos WHERE activo = ?"
+
+    const [cantidad] = await connection.query(sql, [true]);
+
+    return cantidad[0].total;
+}
 
 //buscar productos por id y activo=true
 export const getProductosId = async (id) =>{
@@ -84,6 +92,7 @@ export default {
     getProductosAgrupados,
     postNuevoProducto,
     getProductoIdAdmin,
-    actualizarProducto,
-    estadoProducto
+    estadoProducto,
+    contarProductosActivos,
+    actualizarProducto
 }

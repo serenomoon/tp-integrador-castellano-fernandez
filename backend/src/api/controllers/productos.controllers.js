@@ -3,8 +3,16 @@ import productModels from "../models/producto.models.js";
 //funcion de nuestra API-Cliente que le va a devolver todos los productos al cliente
 export const getProductos = async (req, res) => {
     try{
-        const rows = await productModels.getProductosActivos();
+        const page = parseInt(req.query.page) || 1; //traemos el numero de página desde el navegador, si no lo seteamos en 1
+        const limit = parseInt(req.query.limit) || 20; //limite de productos por pagina
+        const offset = (page - 1) * limit; //es el salto de cantidad de productos que vamos a traer en la consulta a la DB, para cargar 
         
+        const rows = await productModels.getProductosActivos(limit, offset);
+
+        const totalProductos = await productModels.contarProductosActivos();
+        const totalPaginas = Math.ceil(totalProductos / limit); //ceil redondea la division
+
+
         //Este quilombo es gracias a Saulo que se cagó en el español que manejamos en la DB
         const productosMapeados = rows.map(prod => {
             return {
@@ -18,7 +26,9 @@ export const getProductos = async (req, res) => {
         });
         return res.json({
             payload: productosMapeados,
-            total: productosMapeados.length
+            totalProductos: totalProductos,
+            totalPaginas: totalPaginas,
+            paginaActual: page
         });
         
     }catch(error){
