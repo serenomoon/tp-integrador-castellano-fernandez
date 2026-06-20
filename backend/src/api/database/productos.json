@@ -1,0 +1,1026 @@
+[
+  {
+    "nombre": "Remera Classic White",
+    "descripcion": "Remera de algodón 100% lisa, corte clásico y fresca para el día a día.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 0
+  },
+  {
+    "nombre": "Pantalón Jean Slim Fit",
+    "descripcion": "Pantalón de jean azul oscuro elastizado, calce moderno y cómodo.",
+    "precio": 24500.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Black",
+    "descripcion": "Remera de calce holgado y pesado urbano, ideal para un estilo callejero.",
+    "precio": 11200.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Verde Militar",
+    "descripcion": "Pantalón cargo de gabardina reforzada con bolsillos laterales espaciosos.",
+    "precio": 27900.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Striped Navy",
+    "descripcion": "Remera a rayas horizontales azul marino y blanco de algodón peinado.",
+    "precio": 9400.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Gris Melange",
+    "descripcion": "Pantalón jogger deportivo rústico con cordón ajustable en cintura y puños.",
+    "precio": 19800.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 0
+  },
+  {
+    "nombre": "Remera Graphic Vintage",
+    "descripcion": "Remera con estampa retro gastada de bandas de rock clásicas.",
+    "precio": 10500.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Gabardina Beige",
+    "descripcion": "Pantalón chino de gabardina fina beige, ideal para eventos semi-formales.",
+    "precio": 25900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Henley Verde Oliva",
+    "descripcion": "Remera con cuello de tres botones y tejido gofrado waffle térmico.",
+    "precio": 11800.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Negro Roto",
+    "descripcion": "Pantalón de jean negro con roturas localizadas en las rodillas.",
+    "precio": 26500.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera V-Neck Gris",
+    "descripcion": "Remera clásica escote en V entallada, suave al tacto y liviana.",
+    "precio": 8800.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 0
+  },
+  {
+    "nombre": "Pantalón Sastrero Negro",
+    "descripcion": "Pantalón pinzado corte recto sastrero, ideal para looks de oficina.",
+    "precio": 29000.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Acid Wash Celeste",
+    "descripcion": "Remera con lavado tipo nevado en tonos celestes claros.",
+    "precio": 12500.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Camuflado",
+    "descripcion": "Pantalón deportivo con estampa camuflada y puños de rib elástico.",
+    "precio": 21500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Sports Dry Fit",
+    "descripcion": "Remera deportiva de poliéster transpirable con tecnología dry-fit.",
+    "precio": 10900.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Short Deportivo",
+    "descripcion": "Pantalón corto de microfibra liviana con suspensor interior para correr.",
+    "precio": 13900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 0
+  },
+  {
+    "nombre": "Remera Polo Piqué Azul",
+    "descripcion": "Remera chomba tipo polo de piqué clásico con cuello rígido a tono.",
+    "precio": 15600.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Lino Blanco",
+    "descripcion": "Pantalón de lino fino y fresco, corte playero con cordón regulable.",
+    "precio": 31000.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Heavy Cotton Mostaza",
+    "descripcion": "Remera gruesa de 200 gramos de algodón color mostaza otoñal.",
+    "precio": 10800.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogging Algodón Negro",
+    "descripcion": "Pantalón deportivo clásico de frisa abrigado con bolsillos.",
+    "precio": 18900.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Tie Dye Pastel",
+    "descripcion": "Remera teñida a mano con tintes pasteles rosa, amarillo y violeta.",
+    "precio": 12800.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 0
+  },
+  {
+    "nombre": "Pantalón Chino Azul Marino",
+    "descripcion": "Pantalón chino clásico de gabardina peinada, semi-elastizado.",
+    "precio": 25900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Bordó",
+    "descripcion": "Remera lisa color bordó profundo de algodón peruano premium.",
+    "precio": 9900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Beige",
+    "descripcion": "Pantalón cargo de corte amplio con cordón elástico en botamangas.",
+    "precio": 28500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estampada Selva",
+    "descripcion": "Remera veraniega con hojas de palmera estampadas en tonos verdes.",
+    "precio": 10200.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Recto Claro",
+    "descripcion": "Jean de algodón rígido celeste lavado, calce clásico noventero.",
+    "precio": 23900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 0
+  },
+  {
+    "nombre": "Remera Cropped Ribbed",
+    "descripcion": "Remera corta de tela morley canalé de calce al cuerpo y suave.",
+    "precio": 8200.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Chupín Gris",
+    "descripcion": "Jean súper ajustado chupín en tono gris plomo desgastado.",
+    "precio": 24900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Off-White",
+    "descripcion": "Remera color crema hueso con costuras caídas y hombros bajos.",
+    "precio": 11500.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Palazzo Rústico",
+    "descripcion": "Pantalón palazzo ancho de modal rústico, ultra holgado y liviano.",
+    "precio": 22500.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Polo Negra Premium",
+    "descripcion": "Remera chomba negra lisa confeccionada en algodón mercerizado elegante.",
+    "precio": 16900.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 0
+  },
+  {
+    "nombre": "Pantalón de Corderoy Marrón",
+    "descripcion": "Pantalón clásico de pana de corderoy marrón chocolate, abrigado.",
+    "precio": 28900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Azul Melange",
+    "descripcion": "Remera jaspeada en tonos azules y grises, ideal deportiva y urbana.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Verde Seco",
+    "descripcion": "Pantalón deportivo con elástico y cordones en cintura, puños en tobillos.",
+    "precio": 19900.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Rayada Roja y Negra",
+    "descripcion": "Remera a rayas horizontales estilo grunge de algodón medio.",
+    "precio": 9600.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Gabardina Negro Regular",
+    "descripcion": "Pantalón liso de corte recto clásico de gabardina resistente.",
+    "precio": 25900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 0
+  },
+  {
+    "nombre": "Remera Manga Larga Negra",
+    "descripcion": "Remera manga larga con puño elástico, ideal para usar abajo de abrigos.",
+    "precio": 12200.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogging Azul Marino",
+    "descripcion": "Pantalón jogger deportivo de algodón frizado azul oscuro.",
+    "precio": 18900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera de Lino Blanca",
+    "descripcion": "Remera cuello redondo de hilado de lino fresca y veraniega.",
+    "precio": 14900.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Mom Celeste",
+    "descripcion": "Jean de tiro alto y botamanga ancha con leve nevado retro de mujer.",
+    "precio": 26800.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Heavy Cotton Gris",
+    "descripcion": "Remera de algodón peinado grueso gris topo, excelente caída.",
+    "precio": 10800.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 0
+  },
+  {
+    "nombre": "Pantalón Chino Bordó",
+    "descripcion": "Pantalón chino entallado de gabardina semi-elastizada color vino.",
+    "precio": 25900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera con Estampa Back",
+    "descripcion": "Remera lisa adelante con gran ilustración urbana en la espalda.",
+    "precio": 11900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Short Bañador Rojo",
+    "descripcion": "Short de baño de secado ultra rápido de poliéster con red interna.",
+    "precio": 15400.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estilo Beisbolera",
+    "descripcion": "Remera de manga ranglan corta en color blanco y mangas negras.",
+    "precio": 9900.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jeans Ancho Wide Leg",
+    "descripcion": "Jeans holgados tiro alto y pierna ultra ancha, última tendencia.",
+    "precio": 29900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 0
+  },
+  {
+    "nombre": "Remera Deportiva Neon",
+    "descripcion": "Remera técnica amarilla fluorescente para visibilidad en running nocturno.",
+    "precio": 11300.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Vestir Gris Plomo",
+    "descripcion": "Pantalón pinzado elegante de vestir masculino de media estación.",
+    "precio": 32000.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Verde Militar",
+    "descripcion": "Remera clásica cuello redondo verde oliva militar de algodón.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Mostaza",
+    "descripcion": "Pantalón cómodo tipo gabardina jogger con botamanga elástica y cordón.",
+    "precio": 22800.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Polo Blanca Classic",
+    "descripcion": "Remera chomba clásica blanca de piqué suave, cuello semirrígido.",
+    "precio": 15600.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Negro Técnico",
+    "descripcion": "Pantalón cargo de tela antidesgarro ripstop, ideal outdoor.",
+    "precio": 31500.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Cuello Alto Negra",
+    "descripcion": "Remera de morley elástica de cuello media polera entallada de abrigo.",
+    "precio": 13200.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Shorts Cargo Gabardina",
+    "descripcion": "Bermuda playera/urbana tipo cargo de gabardina con bolsillos grandes.",
+    "precio": 18500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Lavanda",
+    "descripcion": "Remera urbana corte boxy pesada color lavanda pastel unisex.",
+    "precio": 11800.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Calza Deportiva",
+    "descripcion": "Calza larga deportiva reforzada de lycra de alta compresión negra.",
+    "precio": 16900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera de Algodón Pima Gris",
+    "descripcion": "Remera de algodón premium peruano, sensación ultra suave y duradera.",
+    "precio": 13900.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Jogger Celeste",
+    "descripcion": "Pantalón jogger confeccionado en jean fino, cómodo con puños elastizados.",
+    "precio": 23500.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Chomba Roja Piqué",
+    "descripcion": "Remera polo roja con vivos cuello y mangas negros a contratono.",
+    "precio": 15800.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Pana Negro Recto",
+    "descripcion": "Pantalón recto clásico de pana abrigado de vestir de invierno.",
+    "precio": 29900.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estampada Floral",
+    "descripcion": "Remera negra con discreta rosa estampada en el centro del pecho.",
+    "precio": 10500.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Sastrero Slim Fit",
+    "descripcion": "Pantalón elegante chupín de sarga color beige arena formal.",
+    "precio": 31000.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Amarilla",
+    "descripcion": "Remera lisa color amarillo pastel veraniego de algodón suave.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Chupín Azul",
+    "descripcion": "Jean súper ajustado tiro medio con lavado azul clásico raspado.",
+    "precio": 24900.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Manga Larga Rayada",
+    "descripcion": "Remera manga larga a rayas negras y blancas marinera clásica.",
+    "precio": 12900.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Sastrero Ancho Gris",
+    "descripcion": "Pantalón ancho sastrero pinzado tiro alto en franela gris abrigada.",
+    "precio": 33900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Heavy Cotton Terracota",
+    "descripcion": "Remera pesada color terracota ladrillo súper cómoda y gruesa.",
+    "precio": 10800.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Bermuda Gabardina Blanca",
+    "descripcion": "Bermuda de corte recto gabardina blanca fina ideal playa.",
+    "precio": 18900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Crop Top Negra Morley",
+    "descripcion": "Crop top negro de morley canalé de cuello redondo y manga corta.",
+    "precio": 7900.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Gris Oscuro",
+    "descripcion": "Pantalón cargo de gabardina satinada gris topo con cordones ajustables.",
+    "precio": 28900.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Henley Blanca",
+    "descripcion": "Remera waffle waffle blanca con cuello abotonado clásica masculina.",
+    "precio": 11800.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Short Short de Jean",
+    "descripcion": "Short cortito desflecado de jean rígido celeste lavado tiro alto.",
+    "precio": 19900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Salmon",
+    "descripcion": "Remera de hombros caídos y manga ancha color salmón pastel.",
+    "precio": 11500.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Lino Negro",
+    "descripcion": "Pantalón suelto playero de lino negro con cintura elastizada.",
+    "precio": 31500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Polo Celeste Melange",
+    "descripcion": "Remera tipo chomba celeste jaspeada de algodón piqué clásico.",
+    "precio": 15600.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Chino Verde Oliva",
+    "descripcion": "Pantalón chino clásico formal/sport de gabardina verde oliva.",
+    "precio": 25900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Deportiva Gris Dry Fit",
+    "descripcion": "Remera técnica de poliéster ultra liviano respirable running.",
+    "precio": 10900.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogging Rústico Negro",
+    "descripcion": "Pantalón de chándal de algodón rústico fino ideal media estación.",
+    "precio": 17900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Acid Wash Gris",
+    "descripcion": "Remera con lavado mineral tipo vintage gris oscuro desgastado.",
+    "precio": 12500.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Recto Oscuro",
+    "descripcion": "Jean de corte regular rígido azul marino clásico para trabajo.",
+    "precio": 24200.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Azul Marino",
+    "descripcion": "Remera clásica lisa azul oscuro de algodón jersey de alta calidad.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Cargo Camuflado",
+    "descripcion": "Híbrido de jogger y cargo con bolsillos y puños con elástico camuflado.",
+    "precio": 26900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estampada Tokio",
+    "descripcion": "Remera blanca con estampa tipográfica japonesa en tinta roja.",
+    "precio": 10500.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Sastrero Plisado",
+    "descripcion": "Pantalón formal sastrero con pinzas y pliegues marcados tiro alto.",
+    "precio": 31500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Cropped Blanca",
+    "descripcion": "Remera cortita lisa blanca de morley súper elástica juvenil.",
+    "precio": 8200.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Bermuda Jean Gris",
+    "descripcion": "Bermuda larga de jean gris oscuro con dobladillo y calce regular.",
+    "precio": 19500.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Verde Botella",
+    "descripcion": "Remera holgada urbana de algodón pesado color verde profundo.",
+    "precio": 11500.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogging Gris Claro",
+    "descripcion": "Pantalón deportivo clásico con felpa interior gris melange claro.",
+    "precio": 18900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Celeste",
+    "descripcion": "Remera lisa color celeste cielo confeccionada en jersey peinado.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Beige Oscuro",
+    "descripcion": "Pantalón cargo multibolsillo de lona de algodón ultra reforzada.",
+    "precio": 29900.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Polo Rayada Sport",
+    "descripcion": "Remera chomba a finas rayas rojas y blancas de piqué veraniego.",
+    "precio": 15900.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Pana Verde Pino",
+    "descripcion": "Pantalón recto abrigado de pana fina de corderoy verde oscuro.",
+    "precio": 28900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera de Algodón Orgánico Café",
+    "descripcion": "Remera lisa marrón café hecha con hilados de algodón orgánico.",
+    "precio": 10900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jeans Nevado Gris",
+    "descripcion": "Pantalón vaquero con fuerte proceso de lavado nevado ácido gris.",
+    "precio": 25900.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Henley Gris Topo",
+    "descripcion": "Remera waffle gofrada gris oscuro con cuello clásico de botones.",
+    "precio": 11800.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Bootcut Azul",
+    "descripcion": "Jean de tiro medio con bota levemente acampanada clásica retro.",
+    "precio": 26900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Cropped Rayada",
+    "descripcion": "Remera corta a rayas negras y blancas horizontales ajustada morley.",
+    "precio": 8500.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogging Deportivo Rojo",
+    "descripcion": "Pantalón deportivo frisado rojo vivo con bandas laterales negras.",
+    "precio": 19900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Manga Larga Gris Claro",
+    "descripcion": "Remera manga larga lisa gris melange suave ideal interior.",
+    "precio": 12500.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Gabardina Verde",
+    "descripcion": "Pantalón de corte amplio cargo verde seco con puños ajustables.",
+    "precio": 28900.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Violeta",
+    "descripcion": "Remera urbana holgada boxy de algodón pesado color violeta intenso.",
+    "precio": 11500.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Short Deportivo Azul",
+    "descripcion": "Pantalón corto de running de microfibra elástica azul cobalto.",
+    "precio": 13900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estampada Retro Art",
+    "descripcion": "Remera negra con ilustración abstracta colorida en el frente.",
+    "precio": 10500.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Palazzo de Lino",
+    "descripcion": "Pantalón playero palazzo de lino color beige muy suelto.",
+    "precio": 31500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Naranja",
+    "descripcion": "Remera lisa naranja vibrante de algodón jersey ideal verano.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Mostaza Rústico",
+    "descripcion": "Pantalón jogging con bolsillos delanteros y cordón a tono.",
+    "precio": 19800.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Polo Gris Piqué",
+    "descripcion": "Remera chomba gris clásica de piqué suave con cuello a tono.",
+    "precio": 15600.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Corderoy Azul Marino",
+    "descripcion": "Pantalón recto clásico de corderoy pana azul oscuro formal/abrigado.",
+    "precio": 28900.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Rosa Pastel",
+    "descripcion": "Remera lisa color rosa suave de algodón peruano muy confortable.",
+    "precio": 9900.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Gabardina Gris",
+    "descripcion": "Pantalón de corte amplio cargo gris perla con bolsillos con solapa.",
+    "precio": 28500.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estampada Sunset",
+    "descripcion": "Remera amarilla con estampa de atardecer retro en California.",
+    "precio": 10200.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Chupín Blanco",
+    "descripcion": "Jean chupín blanco con lycra elastizado de calce muy ceñido.",
+    "precio": 24900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Crop Top Blanca Morley",
+    "descripcion": "Crop top básico blanco cuello redondo y manga corta juvenil.",
+    "precio": 7900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Sastrero Slim Fit Gris",
+    "descripcion": "Pantalón de vestir entallado de tela fría gris formal de oficina.",
+    "precio": 31000.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Básica Verde Jade",
+    "descripcion": "Remera lisa color verde jade de algodón peinado jersey suave.",
+    "precio": 8900.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogger Gabardina Negra",
+    "descripcion": "Pantalón cómodo tipo gabardina jogger negro liso con cordones.",
+    "precio": 22800.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Polo Bordó Classic",
+    "descripcion": "Remera chomba clásica bordó de piqué suave con logo bordado.",
+    "precio": 15600.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Cargo Gris Outdoor",
+    "descripcion": "Pantalón cargo de tela antidesgarro ripstop gris claro montaña.",
+    "precio": 31500.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Cuello Alto Gris Morley",
+    "descripcion": "Remera morley elastizada con medio cuello tortuga abrigada.",
+    "precio": 13200.00,
+    "imagenUrl": "/uploads/remera05.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Bermuda Cargo Beige",
+    "descripcion": "Bermuda de gabardina resistente color beige con bolsillos amplios.",
+    "precio": 18500.00,
+    "imagenUrl": "/uploads/pantalon05.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Oversized Blanca Art",
+    "descripcion": "Remera de calce holgado caída blanca con estampa abstracta urbana.",
+    "precio": 11800.00,
+    "imagenUrl": "/uploads/remera01",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jogging Algodón Gris",
+    "descripcion": "Pantalón deportivo clásico de frisa abrigado con cordones gris.",
+    "precio": 18900.00,
+    "imagenUrl": "/uploads/pantalon01.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera de Algodón Pima Negra",
+    "descripcion": "Remera lisa de algodón peruano premium sensación suave y formal.",
+    "precio": 13900.00,
+    "imagenUrl": "/uploads/remera02.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Jean Jogger Negro",
+    "descripcion": "Pantalón jogger cómodo de denim negro fino prelavado con puños.",
+    "precio": 23500.00,
+    "imagenUrl": "/uploads/pantalon02.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Chomba Gris Oscura",
+    "descripcion": "Remera polo gris topo con detalles en cuello a contraste.",
+    "precio": 15800.00,
+    "imagenUrl": "/uploads/remera03.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón de Vestir Azul Marino",
+    "descripcion": "Pantalón sastrero recto formal clásico azul oscuro de sarga.",
+    "precio": 29900.00,
+    "imagenUrl": "/uploads/pantalon03.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  },
+  {
+    "nombre": "Remera Estampada Vintage Art",
+    "descripcion": "Remera color gris con ilustración vintage botánica en la espalda.",
+    "precio": 10500.00,
+    "imagenUrl": "/uploads/remera04.jpg",
+    "categoria": "Remeras",
+    "activo": 1
+  },
+  {
+    "nombre": "Pantalón Sastrero Plisado Negro",
+    "descripcion": "Pantalón elegante con pinzas y pliegues marcados tiro alto formal.",
+    "precio": 31500.00,
+    "imagenUrl": "/uploads/pantalon04.jpg",
+    "categoria": "Pantalones",
+    "activo": 1
+  }
+]
