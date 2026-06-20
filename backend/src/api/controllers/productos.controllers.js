@@ -1,4 +1,4 @@
-import productModels from "../models/productModels.js";
+import productModels from "../models/producto.models.js";
 
 //funcion de nuestra API-Cliente que le va a devolver todos los productos al cliente
 export const getProductos = async (req, res) => {

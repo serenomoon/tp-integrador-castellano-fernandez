@@ -1,4 +1,4 @@
-import ventaModels from "../models/ventaModels.js";
+import ventaModels from "../models/venta.models.js";
 
 //funcion de nuestra API-Cliente en donde vamos a registrar una venta exitosa
 export const postVenta = async (req, res) => {

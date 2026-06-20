@@ -1,4 +1,4 @@
-import encuestaModels from "../models/encuestaModels.js";
+import encuestaModels from "../models/encuesta.models.js";
 
 //funcion API-Cliente para insertar en la DB la encuesta
 export const postEncuesta = async (req, res) => {
@@ -19,7 +19,7 @@ export const postEncuesta = async (req, res) => {
         const recomiendaNum = recomienda === "1" ? 1: 0;//convertimos la puntuacion a int
         const archivoUrl = req.file ? `/uploads/${req.file.filename}` : null;//verificamos si subió un archivo o no
 
-        const response = await encuestaModels.postEncuesta({
+        const response = await encuestaModels.crearEncuesta({
             email,
             opinion,
             recomienda: recomiendaNum,

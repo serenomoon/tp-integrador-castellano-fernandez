@@ -1,7 +1,7 @@
 import connection from "../database/db.js";
 
 //modelo para guardar la encuesta en nuestra DB
-const postEncuesta = async ({email, opinion, recomienda, nota, archivoUrl}) => {
+const crearEncuesta = async ({email, opinion, recomienda, nota, archivoUrl}) => {
 
     const sql = "INSERT INTO encuestas (cliente_email, opinion, recomienda, puntuacion, archivoUrl) VALUES (?, ?, ?, ?, ?)";
 
@@ -11,6 +11,6 @@ const postEncuesta = async ({email, opinion, recomienda, nota, archivoUrl}) => {
 
 };
 
-export default{
-    postEncuesta
-}
+export default {
+    crearEncuesta
+};

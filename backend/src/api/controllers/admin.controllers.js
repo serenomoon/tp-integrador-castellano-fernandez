@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
-import userModels from "../models/userModels.js";
-import productModels from "../models/productModels.js";
+import userModels from "../models/user.models.js";
+import productModels from "../models/producto.models.js";
 
 /*
 - endpoint para cargar en formato HTML el login de usuario
