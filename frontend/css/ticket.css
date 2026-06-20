@@ -156,3 +156,28 @@ body.dark .ticket-contenedor {
     font-family: 'Gill Sans', sans-serif;
     font-weight: bold;
 }
+
+@media (max-width: 500px) {
+    .ticket-contenedor {
+        padding: 15px;
+        width: calc(100% - 30px);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .ticket-tabla th, .ticket-tabla td {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .ticket-acciones {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn-ticket {
+        width: 100%;
+    }
+}
+

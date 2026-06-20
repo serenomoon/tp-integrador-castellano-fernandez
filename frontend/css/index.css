@@ -39,9 +39,55 @@
 }
 
 
-.header-bienvenido h1 {
+.header-logo h1 {
     font-size: 4rem;
     line-height: 50px;
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 10px;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .header-logo > div {
+        width: 90vw;
+    }
+
+    .header-logo img {
+        width: 60vw;
+        max-width: 250px;
+    }
+
+    .header-bienvenido > div {
+        width: 85vw;
+        border-width: 4px;
+        padding: 20px 10px;
+    }
+
+    .header-bienvenido h1 {
+        font-size: 2.5rem;
+        line-height: 35px;
+    }
+
+    .header-bienvenido form {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .header-bienvenido input {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .header-bienvenido button {
+        margin-left: 0;
+        width: 80%;
+    }
 }
 
 .header-bienvenido h1 span{
