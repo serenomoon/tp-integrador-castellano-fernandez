@@ -1,0 +1,19 @@
+<header class="header">
+    <div class="header-container">
+        <span class="logo">UrbanStyle</span>
+        <span class="app-name">Autoservicio Kiosko</span>
+        <nav class="nav">
+            <% if (typeof usuario !== 'undefined' && usuario) { %>
+                <a href="/admin/dashboard">Dashboard</a>
+                <a href="/admin/ventas">Ventas</a>
+                <a href="/admin/auditoria">Auditoría</a>
+                <a href="/admin/productos/nuevo">+ Producto</a>
+                <a href="/admin/login" onclick="return confirm('¿Cerrar sesión?')">Salir</a>
+            <% } else { %>
+                <a href="/">Ir al Kiosco</a>
+                <a href="/admin/login">Iniciar Sesión</a>
+            <% } %>
+        </nav>
+        <span class="student-names">Axel Castellano & Saulo Fernández</span>
+    </div>
+</header>

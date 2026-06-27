@@ -34,6 +34,7 @@ Este proyecto implementa un sistema de autoservicio interactivo de indumentaria 
 │   │       ├── models/       # Modelos de datos (consultas SQL aisladas)
 │   │       └── routes/       # Definición de rutas modularizadas
 │   ├── views/                # Vistas EJS de administración (fuera de src)
+│   │   └── partials/         # Componentes reutilizables (head, header)
 │   ├── index.js              # Punto de entrada de Express
 │   └── package.json
 ├── frontend/                 # Interfaz estática del Kiosco (Cliente)
@@ -79,7 +80,7 @@ Tener un servidor local de **MySQL** o **MariaDB** instalado y corriendo en su s
    ```bash
    pnpm install
    ```
-   *(Como alternativa clásica de fallback, también puede usar `npm install`)*.
+   *(Como alternativa de fallback con `npm`, tenga en cuenta que el proyecto define `devEngines` requiriendo `pnpm`. Si experimenta un error `EBADDEVENGINES` con npm v10+, puede evadirlo configurando `--no-dev-engines` en su comando de ejecución).*
 4. Cree un archivo **`.env`** en la carpeta `backend/` basado en la siguiente configuración estándar:
    ```env
    PORT=3000

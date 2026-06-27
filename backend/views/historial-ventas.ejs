@@ -1,46 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial de Ventas</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-
+<%- include('partials/head', { title: 'Historial de Ventas' }) %>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <span class="logo">👕 UrbanStyle</span>
-            <span class="app-name">Autoservicio Kiosko</span>
-            <nav class="nav">
-                <a href="/admin/dashboard">Dashboard</a>
-                <a href="/admin/ventas">Ventas</a>
-                <a href="/admin/productos/nuevo">+ Producto</a>
-                <a href="/admin/login" onclick="return confirm('¿Cerrar sesión?')">Salir</a>
-            </nav>
-            <span class="student-names">Axel Castellano & Saulo Fernández</span>
-        </div>
-    </header>
+    <%- include('partials/header') %>
 
     <main class="container">
         <!-- Header con botón de exportar -->
         <div class="ventas-header-actions">
-            <h1>📊 Historial de Ventas</h1>
+            <h1>Historial de Ventas</h1>
             <div class="ventas-actions-buttons">
                 <a href="/admin/ventas/exportar" class="btn-exportar">
-                    📥 Exportar a Excel
+                    Exportar a Excel
                 </a>
             </div>
         </div>
 
         <!-- Filtros -->
         <div class="ventas-filtros">
-            <input type="text" id="buscar-cliente" placeholder="🔍 Buscar por cliente..." />
+            <input type="text" id="buscar-cliente" placeholder="Buscar por cliente..." />
             <input type="date" id="fecha-inicio" />
             <input type="date" id="fecha-fin" />
             <button type="button" class="btn-filtrar" id="btn-filtrar">Filtrar</button>
-            <button type="button" class="btn-limpiar" id="btn-limpiar">✖ Limpiar</button>
+            <button type="button" class="btn-limpiar" id="btn-limpiar">Limpiar</button>
         </div>
 
         <!-- Estadísticas -->
@@ -101,7 +80,7 @@
                             <div class="venta-header">
                                 <span class="venta-id">#<%= venta.id %></span>
                                 <span class="venta-fecha">
-                                    🕐 <%= fechaFormateada %>
+                                    <%= fechaFormateada %>
                                         <span class="badge">
                                             <%= venta.productos ? venta.productos.length : 0 %> productos
                                         </span>
@@ -110,14 +89,14 @@
 
                             <div class="venta-body">
                                 <div class="venta-cliente">
-                                    <span class="label">👤 Cliente</span>
+                                    <span class="label">Cliente</span>
                                     <span class="value">
                                         <%= venta.nombreCliente || 'Anónimo' %>
                                     </span>
                                 </div>
 
                                 <div class="venta-productos">
-                                    <span class="label">📦 Productos</span>
+                                    <span class="label">Productos</span>
                                     <ul>
                                         <% if (venta.productos && venta.productos.length> 0) { %>
                                             <% venta.productos.forEach(prod=> { %>
@@ -140,7 +119,7 @@
                                 </div>
 
                                 <div class="venta-total">
-                                    <span class="label">💰 Total</span>
+                                    <span class="label">Total</span>
                                     <span class="value">
                                         $<%= venta.precioTotal.toLocaleString() %>
                                             <small>ARS</small>
@@ -153,20 +132,19 @@
 
                 <!-- Paginación -->
                 <div class="pagination">
-                    <button type="button" class="pagina-btn" id="pagina-anterior">◀ Anterior</button>
+                    <button type="button" class="pagina-btn" id="pagina-anterior">Anterior</button>
                     <span class="active">1</span>
                     <button type="button" class="pagina-btn">2</button>
                     <button type="button" class="pagina-btn">3</button>
-                    <button type="button" class="pagina-btn" id="pagina-siguiente">Siguiente ▶</button>
+                    <button type="button" class="pagina-btn" id="pagina-siguiente">Siguiente</button>
                 </div>
 
                 <% } else { %>
                     <div class="empty-message">
-                        <div class="icon">📭</div>
                         <h3>No hay ventas registradas</h3>
                         <p>Todavía no se realizaron ventas en el sistema.</p>
                         <p style="margin-top: 12px; font-size: 13px;">
-                            💡 Podés registrar una venta desde el <a href="/admin/dashboard">Dashboard</a>
+                            Podés registrar una venta desde el <a href="/admin/dashboard">Dashboard</a>
                         </p>
                     </div>
                     <% } %>
@@ -216,7 +194,6 @@
                     msg.id = 'sin-resultados';
                     msg.className = 'empty-message';
                     msg.innerHTML = `
-                        <div class="icon">🔍</div>
                         <h3>No hay resultados</h3>
                         <p>No se encontraron ventas con los filtros aplicados.</p>
                     `;

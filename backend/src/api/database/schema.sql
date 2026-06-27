@@ -44,5 +44,12 @@ CREATE TABLE IF NOT EXISTS encuestas (
     fecha DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE if NOT EXISTS logs_auditoria(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    fecha_hora DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+
 
 

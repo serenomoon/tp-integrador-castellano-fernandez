@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - Autoservicio</title>
-    <!-- Vinculamos el CSS estático. Express lo busca dentro de public/css/ debido al middleware static -->
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include('partials/head', { title: 'Iniciar Sesión' }) %>
 <body>
-    <!-- R.2. Encabezado Obligatorio (Logo, Nombre, Integrantes y Nav) -->
-    <header class="header">
-        <div class="header-container">
-            <span class="logo">👕 UrbanStyle</span>
-            <span class="app-name">Autoservicio Kiosko</span>
-            <nav class="nav">
-                <a href="/">Ir al Kiosco</a>
-            </nav>
-            <span class="student-names">Axel Castellano & Saulo Fernández</span>
-        </div>
-    </header>
+    <%- include('partials/header') %>
 
     <main class="login-container">
         <div class="login-card">
@@ -49,7 +31,7 @@
 
             <!-- Botón de Acceso Rápido -->
             <button type="button" id="btn-quick-access" class="btn btn-secondary">
-                ⚡ Acceso Rápido (Tester)
+                Acceso Rápido (Tester)
             </button>
         </div>
     </main>

@@ -1,0 +1,64 @@
+<%- include('partials/head', { title: 'Auditoría de Inicios de Sesión' }) %>
+<body>
+    <%- include('partials/header') %>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <div>
+                <h1>Auditoría de Accesos</h1>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    Historial de inicios de sesión de administradores del sistema.
+                </p>
+            </div>
+        </div>
+
+        <div class="tabla-container">
+            <% if (logs && logs.length > 0) { %>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Log</th>
+                            <th>Usuario / Administrador</th>
+                            <th>Correo Electrónico</th>
+                            <th>Fecha y Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% logs.forEach(log => { %>
+                            <% 
+                                const fecha = new Date(log.fecha_hora);
+                                const fechaFormateada = fecha.toLocaleDateString('es-AR', {
+                                    day: '2-digit',
+                                    month: '2-digit',
+                                    year: 'numeric',
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                    second: '2-digit'
+                                });
+                            %>
+                            <tr>
+                                <td>
+                                    <strong style="color: var(--text-secondary);">#<%= log.id %></strong>
+                                </td>
+                                <td>
+                                    <strong><%= log.usuario_nombre || 'N/A' %></strong>
+                                </td>
+                                <td style="color: var(--primary-color); font-weight: 500;">
+                                    <%= log.usuario_correo %>
+                                </td>
+                                <td>
+                                    <%= fechaFormateada %>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <div class="text-center" style="padding: 40px 0;">
+                    <p style="font-size: 1.1rem;">No hay registros de inicio de sesión</p>
+                </div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

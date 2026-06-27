@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Administración</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include('partials/head', { title: 'Dashboard' }) %>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <span class="logo">👕 UrbanStyle</span>
-            <span class="app-name">Autoservicio Kiosko</span>
-            <nav class="nav">
-                <a href="/admin/dashboard">Dashboard</a>
-                <a href="/admin/ventas">Ventas</a>
-                <a href="/admin/productos/nuevo">+ Producto</a>
-                <a href="/admin/login" onclick="return confirm('¿Cerrar sesión?')">Salir</a>
-            </nav>
-            <span class="student-names">Axel Castellano & Saulo Fernández</span>
-        </div>
-    </header>
+    <%- include('partials/header') %>
 
     <main class="dashboard-container">
         <!-- Header del Dashboard -->
         <div class="dashboard-header">
             <div>
-                <h1>📊 Dashboard</h1>
+                <h1>Dashboard</h1>
                 <p style="color: var(--text-secondary); font-size: 0.95rem;">
                     Bienvenido, <strong style="color: var(--text-primary);">
                         <%= usuario ? usuario.correo : 'Administrador' %>
@@ -33,7 +14,7 @@
                 </p>
             </div>
             <a href="/admin/productos/nuevo" class="btn-nuevo-producto">
-                ➕ Nuevo Producto
+                Nuevo Producto
             </a>
         </div>
 
@@ -71,12 +52,6 @@
                             <tr class="categoria-header">
                                 <td colspan="5">
                                     <span style="display: flex; align-items: center; gap: 8px;">
-                                        <span style="font-size: 1.2rem;">
-                                            <% if (categoria === 'Remeras') { %>👕
-                                            <% } else if (categoria === 'Pantalones') { %>👖
-                                            <% } else { %>📦
-                                            <% } %>
-                                        </span>
                                         <%= categoria %>
                                         <span style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 400;">
                                             (<%= productos.length %>)
@@ -102,7 +77,7 @@
                                     </td>
                                     <td>
                                         <span class="badge <%= prod.activo ? 'badge-activo' : 'badge-inactivo' %>">
-                                            <%= prod.activo ? '✅ Activo' : '❌ Inactivo' %>
+                                            <%= prod.activo ? 'Activo' : 'Inactivo' %>
                                         </span>
                                     </td>
                                     <td>
@@ -111,10 +86,10 @@
                                             <button type="button" 
                                                     class="btn-toggle <%= prod.activo ? 'desactivar' : 'activar' %>"
                                                     onclick="mostrarModalToggle(<%= prod.id %>, '<%= prod.nombre %>', <%= prod.activo %>)">
-                                                <%= prod.activo ? '🔴 Desactivar' : '🟢 Activar' %>
+                                                <%= prod.activo ? 'Desactivar' : 'Activar' %>
                                             </button>
                                             
-                                            <a href="/admin/productos/editar/<%= prod.id %>" class="editar">✏️ Editar</a>
+                                            <a href="/admin/productos/editar/<%= prod.id %>" class="editar">Editar</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -124,7 +99,7 @@
                 </table>
             <% } else { %>
                 <div class="text-center">
-                    <p style="font-size: 1.1rem;">📭 No hay productos cargados</p>
+                    <p style="font-size: 1.1rem;">No hay productos cargados</p>
                     <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-secondary);">
                         <a href="/admin/productos/nuevo" style="color: var(--primary-color);">Agregá tu primer producto</a>
                     </p>
@@ -172,13 +147,13 @@
             
             // Configurar el modal según la acción
             if (activo) {
-                titulo.textContent = '⚠️ Desactivar Producto';
+                titulo.textContent = 'Desactivar Producto';
                 mensaje.textContent = '¿Estás seguro de que deseas desactivar este producto?';
                 productoInfo.textContent = `"${nombre}" (ID: #${id})`;
                 btnConfirmar.textContent = 'Desactivar';
                 btnConfirmar.className = 'btn btn-primary danger';
             } else {
-                titulo.textContent = '✅ Activar Producto';
+                titulo.textContent = 'Activar Producto';
                 mensaje.textContent = '¿Estás seguro de que deseas activar este producto?';
                 productoInfo.textContent = `"${nombre}" (ID: #${id})`;
                 btnConfirmar.textContent = 'Activar';

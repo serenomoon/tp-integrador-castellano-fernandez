@@ -11,7 +11,8 @@ import {
     postEditarProducto,
     getDashboard,
     getHistorialVentas,
-    toggleProducto
+    toggleProducto,
+    getAuditoria
 } from "../controllers/admin.controllers.js";
 import { upload } from "../middlewares/upload.js";
 import { validateLogin, validateRegister, validateProduct, validateID } from "../middlewares/validators.js";
@@ -34,6 +35,7 @@ router.post("/productos/nuevo", isAuthenticated, upload.single("imagen"), valida
 router.get("/productos/editar/:id", isAuthenticated, validateID, getEditarProducto);
 router.post("/productos/editar/:id", isAuthenticated, validateID, upload.single("imagen"), validateProduct, postEditarProducto);
 router.post("/productos/toggle/:id", isAuthenticated, validateID, toggleProducto);
+router.get("/auditoria", isAuthenticated, getAuditoria);
 
 router.get("/ventas/exportar", isAuthenticated, exportarVentasExcel); 
 

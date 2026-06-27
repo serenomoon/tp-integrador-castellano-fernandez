@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= producto ? 'Editar Producto' : 'Nuevo Producto' %> - Admin
-    </title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-
+<%- include('partials/head', { title: producto ? 'Editar Producto' : 'Nuevo Producto' }) %>
 <body>
-    <!-- R.2. Encabezado Obligatorio (Logo, Nombre, Integrantes y Nav) -->
-    <header class="header">
-        <div class="header-container">
-            <span class="logo">👕 UrbanStyle</span>
-            <span class="app-name">Autoservicio Kiosko</span>
-            <nav class="nav">
-                <a href="/admin/dashboard">Dashboard</a>
-                <a href="/admin/ventas">Ventas</a>
-                <a href="/admin/productos/nuevo">+ Producto</a>
-                <a href="/admin/login" onclick="return confirm('¿Cerrar sesión?')">Salir</a>
-            </nav>
-            <span class="student-names">Axel Castellano & Saulo Fernández</span>
-        </div>
-    </header>
+    <%- include('partials/header') %>
 
     <main class="login-container">
         <div class="login-card">

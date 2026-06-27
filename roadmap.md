@@ -122,9 +122,9 @@ graph TD
 - [x] **E.4. Pantalla de Detalle de Producto:** Crear una ruta accesible en el frontend para ver el detalle en profundidad de un producto específico, tomando su ID desde la barra de direcciones (ej: `/productos/:id`).
 
 ### 2. Adicionales de la Administración [Responsable: Saulo]
-- [ ] **E.5. Pantalla de Registros y Auditoría:** Nueva sección exclusiva dentro del Back-Office de administrador.
-- [ ] **E.6. Sistema de Logs:** El backend debe registrar automáticamente un Log (fecha, hora, usuario de admin) cada vez que un administrador inicia sesión exitosamente.
-- [ ] **E.7. Panel de Monitoreo visual de Logs:** Permitir leer e inspeccionar dicho historial de Logs desde la Pantalla de Registros.
+- [x] **E.5. Pantalla de Registros y Auditoría:** Nueva sección exclusiva dentro del Back-Office de administrador.
+- [x] **E.6. Sistema de Logs:** El backend debe registrar automáticamente un Log (fecha, hora, usuario de admin) cada vez que un administrador inicia sesión exitosamente.
+- [x] **E.7. Panel de Monitoreo visual de Logs:** Permitir leer e inspeccionar dicho historial de Logs desde la Pantalla de Registros.
 - [ ] **E.8. Panel Estadístico de Rendimiento:** Mostrar de manera clara mediante tablas y listados ordenados:
   - Top 10 de productos más vendidos en el sistema.
   - Top 10 de ventas más caras registradas históricamente.

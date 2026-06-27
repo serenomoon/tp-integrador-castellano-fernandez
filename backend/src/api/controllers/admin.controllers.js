@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import userModels from "../models/user.models.js";
 import productModels from "../models/producto.models.js";
 import ventaModels from "../models/venta.models.js";
+import logModels from "../models/log.models.js";
 
 /*
 - endpoint para cargar en formato HTML el login de usuario
@@ -34,6 +35,9 @@ export const postLogin = async (req, res) => {
                 id: usuario.id,
                 correo: usuario.correo
             }; //usamos el middleware session para guardar los datos del usuario
+
+            await logModels.registrarLog(usuario.id);
+
             res.redirect("/admin/dashboard");
         }
     } catch (error) {
@@ -240,5 +244,15 @@ export const toggleProducto = async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).send("Error al cambiar estado del producto");
+    }
+};
+
+export const getAuditoria = async (req, res) => {
+    try {
+        const logs = await logModels.obtenerLogs();
+        res.render("auditoria", { logs, usuario: req.session.usuario });
+    } catch (error) {
+        console.error("Error en getAuditoria:", error);
+        res.status(500).send("Error en el servidor al cargar la auditoría");
     }
 };

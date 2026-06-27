@@ -36,11 +36,11 @@ Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autos
   - Renderizar productos activos ordenados por categoría, controles de cantidad y descripción.
 
 ## 🎓 Requerimientos de Final (Adicionales)
-- [ ] **E.5. Registros y Auditoría**:
+- [x] **E.5. Registros y Auditoría**:
   - Nueva sección de auditoría en el panel de auditoría.
-- [ ] **E.6. Sistema de Logs**:
+- [x] **E.6. Sistema de Logs**:
   - Registrar en base de datos logins de administradores exitosos (fecha, hora, usuario).
-- [ ] **E.7. Monitoreo de Logs**:
+- [x] **E.7. Monitoreo de Logs**:
   - Visualizar listado de logs desde el panel de auditoría.
 - [ ] **E.8. Estadísticas**:
   - Mostrar Top 10 más vendidos, Top 10 ventas más caras y al menos dos métricas de negocio extra.
