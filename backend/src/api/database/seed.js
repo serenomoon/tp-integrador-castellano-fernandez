@@ -101,6 +101,7 @@ async function seed() {
 
         // 3. Generar 20 Ventas de Prueba
         console.log("Generando 20 ventas de prueba...");
+        
         const nombresClientes = ["Axel Castellano", "Saulo Fernández", "María Becerra", "Lionel Messi", "Diego Maradona", "Emiliano Martínez", "Rodrigo De Paul", "Julián Álvarez", "Lautaro Martínez", "Ángel Di María", "Clara Benítez", "Lucas Gómez", "Sofía Rodríguez", "Mateo Díaz", "Valentina Paz", "Bautista Silva", "Catalina Herrera", "Tomás Peralta", "Camila Ruiz", "Facundo Castro"];
         
         for (let i = 0; i < 20; i++) {
