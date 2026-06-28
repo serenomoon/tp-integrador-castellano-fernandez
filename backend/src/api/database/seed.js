@@ -77,6 +77,7 @@ async function seed() {
         await connection.query("SET FOREIGN_KEY_CHECKS = 1");
 
         console.log("Insertando productos por defecto...");
+        const productosInsertados = [];
         for (let productos of productosDefecto) {
             let imagenAleatoria = productos.imagenUrl;
             if (productos.categoria === "Remeras") {
@@ -84,12 +85,67 @@ async function seed() {
             } else if (productos.categoria === "Pantalones") {
                 imagenAleatoria = imagenesPantalones[Math.floor(Math.random() * imagenesPantalones.length)];
             }
-            await connection.query(
+            const [result] = await connection.query(
                 "INSERT INTO productos (nombre, descripcion, precio, imagenUrl, categoria, activo) VALUES (?, ?, ?, ?, ?, ?)", 
                 [productos.nombre, productos.descripcion, productos.precio, imagenAleatoria, productos.categoria, productos.activo]
             );
+            
+            // Guardamos el ID insertado y el precio para usarlo en las ventas
+            productosInsertados.push({
+                id: result.insertId,
+                nombre: productos.nombre,
+                precio: parseFloat(productos.precio)
+            });
         }
-        console.log("Productos semillados con éxito.");
+        console.log(`Productos semillados con éxito (${productosInsertados.length} productos).`);
+
+        // 3. Generar 20 Ventas de Prueba
+        console.log("Generando 20 ventas de prueba...");
+        const nombresClientes = ["Axel Castellano", "Saulo Fernández", "María Becerra", "Lionel Messi", "Diego Maradona", "Emiliano Martínez", "Rodrigo De Paul", "Julián Álvarez", "Lautaro Martínez", "Ángel Di María", "Clara Benítez", "Lucas Gómez", "Sofía Rodríguez", "Mateo Díaz", "Valentina Paz", "Bautista Silva", "Catalina Herrera", "Tomás Peralta", "Camila Ruiz", "Facundo Castro"];
+        
+        for (let i = 0; i < 20; i++) {
+            // Nombre de cliente aleatorio
+            const nombreCliente = nombresClientes[i % nombresClientes.length];
+            
+            // Fecha aleatoria en los últimos 30 días
+            const diasAtras = Math.floor(Math.random() * 30);
+            const fechaVenta = new Date();
+            fechaVenta.setDate(fechaVenta.getDate() - diasAtras);
+            
+            // Insertar la venta vacía con total provisorio en 0
+            const [ventaResult] = await connection.query(
+                "INSERT INTO ventas (nombreCliente, fecha, precioTotal) VALUES (?, ?, 0)",
+                [nombreCliente, fechaVenta]
+            );
+            const ventaId = ventaResult.insertId;
+
+            // Determinar cuántos productos distintos tendrá esta venta (entre 1 y 4)
+            const cantProductosDistintos = Math.floor(Math.random() * 4) + 1;
+            let precioTotalVenta = 0;
+
+            // Barajar productos para elegir algunos sin repetir en la misma venta
+            const productosBarajados = [...productosInsertados].sort(() => 0.5 - Math.random());
+            const productosElegidos = productosBarajados.slice(0, cantProductosDistintos);
+
+            for (let prod of productosElegidos) {
+                const cantidad = Math.floor(Math.random() * 3) + 1; // cantidad entre 1 y 3
+                const precioUnitario = prod.precio;
+                
+                await connection.query(
+                    "INSERT INTO ventas_productos (venta_id, producto_id, cantidad, precioUnitario) VALUES (?, ?, ?, ?)",
+                    [ventaId, prod.id, cantidad, precioUnitario]
+                );
+
+                precioTotalVenta += cantidad * precioUnitario;
+            }
+
+            // Actualizar la venta con su precio total real
+            await connection.query(
+                "UPDATE ventas SET precioTotal = ? WHERE id = ?",
+                [precioTotalVenta, ventaId]
+            );
+        }
+        console.log("✅ 20 ventas y detalles de venta inyectados con éxito.");
 
 
 

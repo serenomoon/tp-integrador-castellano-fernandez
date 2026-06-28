@@ -42,9 +42,9 @@ Este documento detalla las tareas asignadas a Saulo para el TP Integrador "Autos
   - Registrar en base de datos logins de administradores exitosos (fecha, hora, usuario).
 - [x] **E.7. Monitoreo de Logs**:
   - Visualizar listado de logs desde el panel de auditoría.
-- [ ] **E.8. Estadísticas**:
+- [/] **E.8. Estadísticas**:
   - Mostrar Top 10 más vendidos, Top 10 ventas más caras y al menos dos métricas de negocio extra.
-- [ ] **E.9. Descarga de Encuestas**:
+- [/] **E.9. Descarga de Encuestas**:
   - Botón para exportar todas las encuestas respondidas a formato `.xlsx`.
 
 ## ⚡ Modularización y Limpieza (Completado por Saulo)

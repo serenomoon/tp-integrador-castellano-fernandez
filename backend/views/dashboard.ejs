@@ -19,7 +19,7 @@
         </div>
 
         <!-- Estadísticas -->
-        <div class="stats-grid">
+        <div class="stats-grid-dashboard">
             <div class="stat-card">
                 <div class="stat-number"><%= stats.total %></div>
                 <div class="stat-label">Total Productos</div>
@@ -31,6 +31,12 @@
             <div class="stat-card">
                 <div class="stat-number"><%= stats.inactivos %></div>
                 <div class="stat-label">Inactivos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">
+                    $<%= parseFloat(stats.totalIngresos || 0).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) %>
+                </div>
+                <div class="stat-label">Total Facturado</div>
             </div>
         </div>
 
@@ -105,6 +111,53 @@
                     </p>
                 </div>
             <% } %>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- 🔥 SECCIÓN DE TOPS Y ESTADÍSTICAS AVANZADAS -->
+        <!-- ============================================ -->
+        <div class="tops-container">
+            <!-- Top 10 Productos Más Vendidos -->
+            <div class="top-stat-card">
+                <h3>🔥 Top 10 Más Vendidos</h3>
+                <% if (topProductos && topProductos.length > 0) { %>
+                    <ul class="top-list">
+                        <% topProductos.forEach((prod, index) => { %>
+                            <li class="top-list-item">
+                                <span>
+                                    <span class="rank"><%= index + 1 %>.</span> 
+                                    <%= prod.nombre %> 
+                                    <span class="meta">[<%= prod.categoria %>]</span>
+                                </span>
+                                <span class="value"><%= prod.total_vendido %> un.</span>
+                            </li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <p class="meta">Aún no hay ventas registradas.</p>
+                <% } %>
+            </div>
+
+            <!-- Top 10 Ventas Más Caras -->
+            <div class="top-stat-card">
+                <h3>💰 Top 10 Ventas Más Caras</h3>
+                <% if (topVentas && topVentas.length > 0) { %>
+                    <ul class="top-list">
+                        <% topVentas.forEach((venta, index) => { %>
+                            <li class="top-list-item">
+                                <span>
+                                    <span class="rank"><%= index + 1 %>.</span> 
+                                    <%= venta.nombreCliente %> 
+                                    <span class="meta">(<%= new Date(venta.fecha).toLocaleDateString('es-AR') %>)</span>
+                                </span>
+                                <span class="value">$<%= parseFloat(venta.precioTotal).toFixed(2) %></span>
+                            </li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <p class="meta">Aún no hay ventas registradas.</p>
+                <% } %>
+            </div>
         </div>
     </main>
 

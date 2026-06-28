@@ -91,8 +91,26 @@ const obtenerVentaById = async (id) => {
     }
 };
 
+const getTopVentas = async () => {
+    const sql = "SELECT id, nombreCliente, fecha, precioTotal FROM ventas ORDER BY precioTotal DESC LIMIT 10";
+
+    const [rows] = await connection.query(sql);
+
+    return rows;
+}
+
+const getTotalIngresos = async () => {
+    const sql = "SELECT SUM(precioTotal) AS total FROM ventas"
+
+    const [rows] = await connection.query(sql)
+
+    return rows;
+}
+
 export default {
     registrarVenta,
     obtenerVentas,
-    obtenerVentaById
+    obtenerVentaById,
+    getTopVentas,
+    getTotalIngresos
 };

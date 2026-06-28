@@ -1112,3 +1112,69 @@ body {
 .modal-footer .btn-primary.danger:hover {
     background: #dc2626;
 }
+
+/* ============================================ */
+/* 📊 ESTADÍSTICAS Y TOPS DEL DASHBOARD         */
+/* ============================================ */
+.stats-grid-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tops-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.top-stat-card {
+    padding: 20px;
+    text-align: left;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.top-stat-card h3 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.top-list-item:last-child {
+    border-bottom: none;
+}
+
+.top-list-item .rank {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.top-list-item .meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.top-list-item .value {
+    font-weight: 600;
+    color: var(--text-primary);
+}

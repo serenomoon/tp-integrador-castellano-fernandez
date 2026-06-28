@@ -84,6 +84,14 @@ const estadoProducto = async (id) => {
     await connection.query(sql, [id]);
 };
 
+const getTopProductos = async () => {
+    const sql = "SELECT p.id, p.nombre, p.precio, p.categoria, SUM(vp.cantidad) AS total_vendido FROM productos AS p INNER JOIN ventas_productos AS vp ON p.id = vp.producto_id GROUP BY p.id, p.nombre, p.precio, p.categoria ORDER BY total_vendido DESC LIMIT 10";
+
+    const [rows] = await connection.query(sql);
+
+    return rows;
+}
+
 
 export default {
     getProductosActivos,
@@ -94,5 +102,6 @@ export default {
     getProductoIdAdmin,
     estadoProducto,
     contarProductosActivos,
-    actualizarProducto
+    actualizarProducto,
+    getTopProductos
 }

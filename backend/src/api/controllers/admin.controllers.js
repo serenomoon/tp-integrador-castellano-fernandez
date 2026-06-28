@@ -130,7 +130,7 @@ export const getHistorialVentas = async (req, res) => {
 };
 
 /*
-endpoint TEMPORAL para mostrar el dashboard
+endpoint para mostrar el dashboard
 */
 export const getDashboard = async (req, res) => {
     try {
@@ -154,6 +154,17 @@ export const getDashboard = async (req, res) => {
                 }
             });
         });
+
+        const topProductos = await productModels.getTopProductos();
+        const topVentas = await ventaModels.getTopVentas();
+        const ingresos = await ventaModels.getTotalIngresos();
+
+        let total = 0;
+        if(ingresos[0]){
+            total = ingresos[0].total;
+        }
+
+
         
         // Renderizar el dashboard con los datos
         res.render("dashboard", {
@@ -161,8 +172,11 @@ export const getDashboard = async (req, res) => {
             stats: {
                 total: totalProductos,
                 activos,
-                inactivos
+                inactivos,
+                totalIngresos: total
             },
+            topProductos,
+            topVentas,
             usuario: req.session.usuario
         });
         
