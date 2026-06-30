@@ -1,4 +1,4 @@
-# 🛒 Kiosco de Autoservicio - TP Integrador
+# 🛒 Tienda de Autoservicio - TP Integrador
 
 Trabajo Práctico Integrador para la materia **Programación III** de la Universidad Tecnológica Nacional (UTN). 
 
@@ -99,6 +99,10 @@ node src/api/database/seed.js
 
 ### 5. Arrancar en Modo Desarrollo
 Ejecute el siguiente comando dentro de la carpeta `backend/` para iniciar el servidor con reinicios automáticos mediante `nodemon`:
+```bash
+pnpm rund dev
+```
+o en su defecto:
 ```bash
 npm run dev
 ```
